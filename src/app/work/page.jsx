@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-import { projectSlots } from '@/data/site';
+import { projects } from '@/data/site';
 
 export const metadata = {
   title: 'Selected Work',
@@ -8,11 +8,39 @@ export const metadata = {
 };
 
 export default function WorkPage() {
+  const web = projects.filter((project) => project.service === 'Web Development');
+  const design = projects.filter((project) => project.service === 'Graphic Design');
+  const video = projects.filter((project) => project.service === 'Video Editing');
+
   return (
     <>
-      <section className="pageHero sectionLight"><div className="shell pageHeroInner"><p className="eyebrow">SELECTED WORK</p><h1>A portfolio should prove range without looking random.</h1><p>This V1 intentionally uses structured placeholders instead of stock imagery. Replace each slot with a real project chosen for quality, commercial relevance and range.</p></div></section>
-      <section className="section sectionDark"><div className="shell projectGrid workPageGrid">{projectSlots.map((project, index) => <ProjectCard key={project.id} project={project} large={index % 3 === 0} />)}</div></section>
-      <section className="section sectionLight"><div className="shell editorialNote"><p className="eyebrow">CASE STUDY RULE</p><h2>Do not turn this into a gallery of everything you have ever made.</h2><p>Launch with roughly 15–20 curated projects, then turn the best 6–8 into deeper case studies: client context, challenge, work, outcome, testimonial and related service CTA.</p></div></section>
+      <section className="pageHero sectionLight">
+        <div className="shell pageHeroInner">
+          <p className="eyebrow">SELECTED WORK</p>
+          <h1>Work that shows what we can actually handle.</h1>
+          <p>We keep this portfolio curated around commercial relevance and range: real web products, brand systems, UI/UX and the video formats our team produces repeatedly.</p>
+        </div>
+      </section>
+
+      <WorkGroup eyebrow="WEB DEVELOPMENT" title="Websites and products" projects={web} />
+      <WorkGroup eyebrow="GRAPHIC DESIGN" title="Brand and design systems" projects={design} light />
+      <WorkGroup eyebrow="VIDEO EDITING" title="Content built for the platform" projects={video} />
     </>
+  );
+}
+
+function WorkGroup({ eyebrow, title, projects, light = false }) {
+  return (
+    <section className={`section ${light ? 'sectionLight' : 'sectionDark'}`}>
+      <div className="shell">
+        <div className={`sectionHead sectionHeadSplit ${light ? '' : 'darkHead'}`}>
+          <div><p className={`eyebrow ${light ? '' : 'eyebrowLight'}`}>{eyebrow}</p><h2>{title}</h2></div>
+          <p>{light ? 'Selected design engagements spanning identity, UI/UX and recurring brand production.' : 'Each project page explains the context, our role and the work delivered—so the portfolio shows how the team thinks, not only what the final screen looked like.'}</p>
+        </div>
+        <div className="projectGrid workPageGrid">
+          {projects.map((project, index) => <ProjectCard key={project.slug} project={project} large={index % 4 === 0} />)}
+        </div>
+      </div>
+    </section>
   );
 }

@@ -1,17 +1,18 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ProjectCard from './components/ProjectCard';
 import TestimonialCard from './components/TestimonialCard';
-import { projectSlots, services, testimonials } from '@/data/site';
+import { featuredProjects, services, testimonials } from '@/data/site';
 
 export const metadata = {
   title: 'Creative Agency for Design, Video & Web Development',
   description:
-    'Omni Fusions helps ambitious businesses with premium graphic design, video editing and web development. Pakistan-based team serving clients across the US, UK, Canada, Australia and worldwide.',
+    'Omni Fusions helps ambitious businesses with graphic design, video editing and web development. Pakistan-based team serving clients across the US, UK, Canada, Australia and worldwide.',
   alternates: { canonical: '/' }
 };
 
 export default function HomePage() {
+  const heroProjects = featuredProjects.slice(0, 3);
+
   return (
     <>
       <section className="hero sectionLight">
@@ -19,7 +20,7 @@ export default function HomePage() {
           <div className="heroCopy">
             <p className="eyebrow">CREATIVE + TECHNOLOGY PARTNER</p>
             <h1>Design. Video. Web.<br /><span>One team built to move your business forward.</span></h1>
-            <p className="heroLead">Omni Fusions brings graphic design, video editing and web development under one reliable team—so ambitious businesses can launch, grow and stay consistent without managing multiple freelancers.</p>
+            <p className="heroLead">Omni Fusions brings graphic design, video editing and web development under one reliable team—helping ambitious businesses launch, grow and stay consistent without managing a different freelancer for every task.</p>
             <div className="buttonRow">
               <Link className="button buttonDark" href="/contact">Start a Project <span>↗</span></Link>
               <Link className="textLink" href="/work">Explore Our Work <span>→</span></Link>
@@ -27,41 +28,27 @@ export default function HomePage() {
             <div className="heroTrust">
               <span><strong>250+</strong> clients served</span>
               <span><strong>5+</strong> years industry experience</span>
-              <span><strong>Global</strong> client base</span>
+              <span><strong>10+</strong> specialists</span>
             </div>
           </div>
-          <div className="heroStage">
-            <div className="heroOrb heroOrbOne" />
-            <div className="heroOrb heroOrbTwo" />
-            <div className="heroFrame heroFramePrimary">
-              <span className="frameTag">WEB / PRODUCT</span>
-              <div className="browserChrome"><span /><span /><span /></div>
-              <div className="browserLayout">
-                <div className="browserSide" />
-                <div className="browserContent">
-                  <div className="browserLine browserLineWide" />
-                  <div className="browserLine" />
-                  <div className="browserCards"><i /><i /><i /></div>
+          <div className="heroStage heroProjectStage" aria-label="Selected Omni Fusions work">
+            {heroProjects.map((project, index) => (
+              <Link href={`/work/${project.slug}`} className={`heroProject heroProject${index + 1}`} key={project.slug}>
+                <span className="frameTag">{project.heroLabel}</span>
+                <div className={`heroProjectArt projectVisual${project.accent}`}>
+                  <div className="visualGrid" />
+                  <b>{project.title.slice(0, 2).toUpperCase()}</b>
                 </div>
-              </div>
-            </div>
-            <div className="heroFrame heroFrameSmall">
-              <span className="frameTag">DESIGN</span>
-              <div className="posterShape"><Image src="/brand/mark.png" alt="" width={140} height={140} /></div>
-            </div>
-            <div className="heroFrame heroFrameVideo">
-              <span className="frameTag">VIDEO</span>
-              <div className="videoTimeline"><i /><i /><i /><i /></div>
-              <span className="playMark">▶</span>
-            </div>
-            <p className="heroAssetNote">V1 visual system — replace these abstract frames with 3–5 of your strongest real projects.</p>
+                <div className="heroProjectMeta"><strong>{project.title}</strong><span>{project.type}</span></div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="trustBand">
         <div className="shell trustBandInner">
-          <p>Based in Pakistan. Trusted by businesses across</p>
+          <p>Based in Pakistan. Serving businesses across</p>
           <div className="countryList"><span>United States</span><span>United Kingdom</span><span>Canada</span><span>Australia</span><span>Worldwide</span></div>
         </div>
       </section>
@@ -70,8 +57,8 @@ export default function HomePage() {
         <div className="shell">
           <div className="sectionHead sectionHeadWide">
             <p className="eyebrow">WHAT WE DO</p>
-            <h2>One team. Three disciplines.<br />Built around the work your business actually needs.</h2>
-            <p>We are not trying to be a 40-service agency. Our core is simple: make the brand look better, make the content perform better, and build digital experiences that support growth.</p>
+            <h2>Three core disciplines.<br />One team accountable for the work.</h2>
+            <p>We focus on the areas where clients repeatedly need reliable production: a brand that looks credible, content that feels professionally made, and websites or products that work beyond the launch screen.</p>
           </div>
           <div className="serviceGrid">
             {services.slice(0, 3).map((service, index) => (
@@ -89,24 +76,24 @@ export default function HomePage() {
       <section className="section sectionDark workSection">
         <div className="shell">
           <div className="sectionHead sectionHeadSplit darkHead">
-            <div><p className="eyebrow eyebrowLight">SELECTED WORK</p><h2>Proof before promises.</h2></div>
-            <p>The final launch should feature only your strongest work. These slots are intentionally stock-free and include exact guidance for the assets your designer should prepare.</p>
+            <div><p className="eyebrow eyebrowLight">SELECTED WORK</p><h2>Different disciplines. Same standard.</h2></div>
+            <p>From SaaS products and business websites to brand systems and ongoing video production, our work is built around the client’s actual brief—not a house template.</p>
           </div>
           <div className="projectGrid">
-            {projectSlots.slice(0, 4).map((project, index) => <ProjectCard key={project.id} project={project} large={index === 0 || index === 3} />)}
+            {featuredProjects.slice(0, 6).map((project, index) => <ProjectCard key={project.slug} project={project} large={index === 0 || index === 3} />)}
           </div>
-          <div className="sectionAction"><Link href="/work" className="button buttonLight">View Work Structure <span>↗</span></Link></div>
+          <div className="sectionAction"><Link href="/work" className="button buttonLight">View Selected Work <span>↗</span></Link></div>
         </div>
       </section>
 
       <section className="section sectionRed partnershipSection">
         <div className="shell partnershipGrid">
           <div>
-            <p className="eyebrow eyebrowLight">ONGOING PARTNERSHIP</p>
-            <h2>Your extended creative team—without building one from scratch.</h2>
+            <p className="eyebrow eyebrowLight">ONGOING PARTNERSHIPS</p>
+            <h2>Start with one project. Keep the team when it works.</h2>
           </div>
           <div className="partnershipCopy">
-            <p>For businesses with recurring creative needs, Omni Fusions can stay close to your brand and handle a steady flow of design, video and digital production through one team.</p>
+            <p>A common pattern in our client relationships is simple: a focused first task proves the working style, then the scope grows. For businesses with recurring needs, we can stay close to the brand and handle a steady flow of design, video and digital production.</p>
             <div className="partnershipList">
               <span>Graphic design requests</span><span>Ongoing video editing</span><span>Campaign support</span><span>Web production</span><span>Flexible capacity</span><span>Scale as demand grows</span>
             </div>
@@ -120,13 +107,13 @@ export default function HomePage() {
           <div className="stickyCopy">
             <p className="eyebrow">WHY OMNI FUSIONS</p>
             <h2>Less managing.<br />More progress.</h2>
-            <p>High-value clients do not only pay for execution. They pay for reliability, judgment and a team that reduces the amount they need to manage.</p>
+            <p>Good execution matters. So does having a team that understands the brief, communicates clearly and keeps work moving without constant supervision.</p>
           </div>
           <div className="reasonList">
-            <article><span>01</span><div><h3>An actual team behind the work.</h3><p>Designers, editors and developers collaborate around the project instead of operating as disconnected freelancers.</p></div></article>
-            <article><span>02</span><div><h3>Built around your brand.</h3><p>Your current testimonials already prove a useful strength: the team adapts to brand guidelines and feedback instead of forcing one house style.</p></div></article>
-            <article><span>03</span><div><h3>Strong communication, fewer hand-holding cycles.</h3><p>Clients repeatedly mention responsiveness, professionalism, revisions and the ability to understand what is needed quickly.</p></div></article>
-            <article><span>04</span><div><h3>Flexible enough to scale.</h3><p>Start with one project, continue monthly, or expand production capacity as the relationship and workload grow.</p></div></article>
+            <article><span>01</span><div><h3>An actual team behind the work.</h3><p>Designers, editors and developers collaborate around projects instead of operating as disconnected freelancers.</p></div></article>
+            <article><span>02</span><div><h3>Built around your brand.</h3><p>We adapt to existing guidelines, references and audience expectations so new work feels like part of the same business.</p></div></article>
+            <article><span>03</span><div><h3>Feedback turns into a better workflow.</h3><p>What we learn on the first task carries into the next one, reducing repeated explanations and making ongoing production smoother.</p></div></article>
+            <article><span>04</span><div><h3>Capacity that can grow with the account.</h3><p>Start with a focused project, continue monthly, or expand production capacity when the workload becomes larger.</p></div></article>
           </div>
         </div>
       </section>
@@ -136,15 +123,15 @@ export default function HomePage() {
           <div><strong>250+</strong><span>Clients served worldwide</span></div>
           <div><strong>5+</strong><span>Years of industry experience</span></div>
           <div><strong>10+</strong><span>Creative & technical specialists</span></div>
-          <div><strong>4</strong><span>Core global markets + worldwide delivery</span></div>
+          <div><strong>Global</strong><span>Remote delivery across major international markets</span></div>
         </div>
       </section>
 
       <section className="section sectionLight testimonialsSection">
         <div className="shell">
           <div className="sectionHead sectionHeadSplit">
-            <div><p className="eyebrow">CLIENT FEEDBACK</p><h2>Don’t take our word for it.</h2></div>
-            <p>These are curated excerpts from the verified Upwork feedback you supplied. Names are intentionally omitted here; no testimonial text is rewritten to say “Omni Fusions.”</p>
+            <div><p className="eyebrow">CLIENT FEEDBACK</p><h2>Proof from the people who hired us.</h2></div>
+            <p>Feedback from projects delivered through our Upwork profiles across graphic design, video editing and web development.</p>
           </div>
           <div className="testimonialGrid">
             {testimonials.slice(0, 3).map((item) => <TestimonialCard key={item.category + item.quote} item={item} />)}
@@ -160,22 +147,22 @@ export default function HomePage() {
           </div>
           <div className="processGrid">
             {[
-              ['01', 'Tell us what you’re building', 'Share the goal, scope, timeline and what has already been done.'],
-              ['02', 'We shape the right approach', 'We clarify deliverables, team needs, milestones and the best way to execute.'],
-              ['03', 'Our team gets to work', 'Production moves through the right designers, editors or developers with centralized communication.'],
-              ['04', 'Review, refine and launch', 'Feedback is handled cleanly, then final files or production builds are delivered.'],
-              ['05', 'Keep us around if it works', 'Move into ongoing support when recurring work makes a longer partnership more useful.']
-            ].map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
+              ['01', 'Share the brief', 'Tell us the goal, scope, timeline and what already exists.'],
+              ['02', 'Align on the approach', 'We clarify deliverables, team needs, milestones and the best way to execute.'],
+              ['03', 'Start with focused work', 'For many new relationships, a defined first task is the cleanest way to establish quality and working chemistry.'],
+              ['04', 'Review, refine and deliver', 'Feedback is handled cleanly, then final files or production builds are delivered.'],
+              ['05', 'Keep the team if it fits', 'When recurring work makes sense, we turn what we learned into an ongoing production workflow.']
+            ].map(([num, title, text]) => <article key={num}><span>{num}</span><h3>{title}</h3><p>{text}</p></article>)}
           </div>
         </div>
       </section>
 
-      <section className="finalCta sectionDark">
+      <section className="finalCta sectionRed">
         <div className="shell finalCtaInner">
           <p className="eyebrow eyebrowLight">START A CONVERSATION</p>
           <h2>Have something worth building?</h2>
-          <p>Tell us what you need, what success looks like and the budget you have in mind. We’ll quickly know whether we are a good fit.</p>
-          <div className="buttonRow"><Link href="/contact" className="button buttonLight">Start a Project <span>↗</span></Link><a href="mailto:info@omnifusions.com" className="textLink textLinkLight">info@omnifusions.com <span>→</span></a></div>
+          <p>Tell us what you need, where the project stands and what a good outcome looks like. We’ll tell you quickly whether we are the right fit.</p>
+          <Link href="/contact" className="button buttonLight">Start a Project <span>↗</span></Link>
         </div>
       </section>
     </>

@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
       <div className="shell footerBottom">
         <span>© {new Date().getFullYear()} Omni Fusions. All rights reserved.</span>
-        <span>Creative + Technology Partner</span>
+        <span><a href="/privacy">Privacy</a> · Creative + Technology Partner</span>
       </div>
     </footer>
   );

@@ -1,53 +1,109 @@
-# Omni Fusions V2 — Asset Brief
+# Omni Fusions — Website Asset Brief
 
-The V1 intentionally avoids old stock/template imagery. Replace placeholders with **real Omni Fusions work** wherever possible.
+The website is intentionally built without stock imagery. The abstract project panels are safe development placeholders and can be replaced section-by-section as final work is prepared.
 
-## 1) Homepage hero
-Prepare a premium mixed-work composition using 3–5 strong projects:
-- 1 web/SaaS/product screen
-- 1 graphic/brand identity piece
-- 1 video still or short muted loop
-- Optional: one print/editorial piece
+## Global export guidance
 
-Recommended master canvas: **1800 × 1500 px** or separate transparent crops. Keep backgrounds simple so the brand red remains the accent rather than fighting the artwork.
+- Prefer WebP/AVIF for static web images.
+- Keep original high-resolution JPG/PNG files outside the repo as masters.
+- Desktop project covers: target 1800–2200 px wide.
+- Supporting images: target 1200–1600 px wide.
+- Use 16:10 or 16:9 for web/video hero imagery unless the layout specifically calls for portrait.
+- Short-form video covers can use 9:16 inside a wider designed composition.
+- Keep meaningful text out of rasterized mockups where possible; let HTML carry headings/copy.
 
-## 2) Featured work covers
-Prepare 6 launch covers. Recommended size: **1600 × 1100 px**, WebP/AVIF.
+## Homepage hero
 
-Suggested mix:
-1. SaaS / product website
-2. Brand identity system
-3. Cinematic / long-form video editing
-4. Campaign creative showing multiple deliverables
-5. Custom Next.js/MERN build
-6. E-commerce/DTC creative
+Prepare three strong assets that instantly represent the three commercial pillars:
 
-Each cover should look like a case-study opener, not a random collage.
+1. **Gatherline / Web Product** — desktop product/website overview, ideally a clean SaaS interface composition.
+2. **From Nothing To Glory / Design** — premium identity or channel-brand composition showing the system, not only the logo.
+3. **Best Video Project** — a strong cinematic still or a muted 6–10 second loop.
 
-## 3) Video loops
-For video project cards, use muted autoplay loops only when they materially improve the presentation.
-- 6–10 seconds
-- MP4/WebM
-- 1080p is enough for cards
-- Keep each optimized loop ideally under ~4–6 MB
-- Always provide a poster image
+## Homepage selected work
 
-## 4) Team / office asset
-Use a real office/team photo or 5–8 second cinematic clip.
-- Landscape 16:9
-- Natural lighting
-- People genuinely working
-- Avoid staged handshakes, pointing at blank monitors, or generic stock-office photography
+Recommended first six:
 
-## 5) Client logos
-Provide SVG/transparent PNG logos only for clients whose branding can be shown publicly. Start with 6–12 recognizable or visually strong logos.
+1. Gatherline — SaaS / Product
+2. From Nothing To Glory — Brand + Content
+3. Feel.travel — Custom Web Platform
+4. Best YouTube / cinematic video project
+5. BizMap Legal — Business Website Redesign
+6. One strong additional design or video engagement
 
-## 6) Testimonials
-Original screenshots should be kept as proof. On-site cards should use curated text excerpts and a small “Verified Upwork feedback” label. Do **not** rewrite a quote to replace a team member’s name with “Omni Fusions.”
+## Web case studies
 
-## 7) Performance rules
-- Prefer AVIF/WebP for raster artwork
-- Use SVG for logos/icons
-- Do not upload 8K images for a 700px card
-- Avoid decorative stock images
-- Add descriptive alt text based on the actual project, not “image1”
+### Gatherline
+- Homepage/product overview
+- Product/report interface detail
+- Mobile/responsive view
+
+### Feel.travel
+- Homepage / experience overview
+- Trip or feature flow
+- Mobile view
+
+### BizMap Legal
+- Homepage redesign
+- Service/trust detail
+- Consultation CTA flow
+- Add a before screenshot if available
+
+### Lenguaventura
+- Figma vs live comparison
+- Program page detail
+- Mobile implementation
+
+## Design case studies
+
+### From Nothing To Glory
+- Logo/identity board
+- YouTube thumbnail system
+- Social media grid/campaign
+- Optional channel/device mockup
+
+### White Jacobs
+- Homepage UI mockup
+- Portfolio/detail screen
+- Responsive screen set
+
+Additional design work worth preparing later:
+- Full brand identity
+- Pitch deck / presentation
+- Editorial/eBook/report
+- Print/exhibition/packaging
+- Campaign/ad creative system
+
+## Video case studies
+
+Prepare at least one polished example for each strong category you want to sell:
+
+- YouTube long-form
+- Podcast
+- Faceless/documentary
+- Short-form/Reels
+- Talking-head/vlog
+- Product/commercial/ad if available
+
+For each selected video:
+- One 16:9 hero still or 6–10 second muted loop
+- 2–3 supporting frames
+- Optional timeline/process visual
+- For Shorts/Reels, one 9:16 example plus a 3-up frame grid
+
+## About page
+
+Use a real Omni Fusions office/team asset.
+
+Best option: a 10–20 second muted reel with 3–5 shots:
+- Designers working
+- Editors at workstations
+- Team discussion
+- Detail of screens/workspace
+- Wide office shot
+
+Fallback: one strong 16:9 team/workspace photograph.
+
+## Client logos
+
+Only add logos that Omni Fusions has permission to display. Keep them monochrome/low-contrast in the trust band so they support credibility without overpowering the page.

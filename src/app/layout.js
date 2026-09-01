@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Analytics from './components/Analytics';
 import { site } from '@/data/site';
 
 export const metadata = {
@@ -25,6 +26,9 @@ export const metadata = {
     description: site.description,
     images: ['/og-image.png']
   },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
   icons: { icon: '/favicon.png' }
 };
 
@@ -43,8 +47,9 @@ export default function RootLayout({ children }) {
     email: site.email,
     logo: `${site.url}/brand/mark.png`,
     description: site.description,
-    areaServed: ['US', 'GB', 'CA', 'AU', 'PK'],
-    knowsAbout: ['Graphic Design', 'Video Editing', 'Next.js Development', 'WordPress Development', 'Web Development']
+    foundingLocation: { '@type': 'Country', name: 'Pakistan' },
+    areaServed: ['United States', 'United Kingdom', 'Canada', 'Australia', 'Worldwide'],
+    knowsAbout: ['Graphic Design', 'Video Editing', 'Next.js Development', 'React Development', 'WordPress Development', 'Web Development']
   };
 
   return (
@@ -54,10 +59,8 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
+        <Analytics />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </body>
     </html>
   );

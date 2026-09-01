@@ -516,3 +516,405 @@ img { max-width: 100%; height: auto; }
 .formFoot p {
   max-width: 360px;
 }
+
+.heroCopy h1 {
+  margin: 0;
+  max-width: 760px;
+  font-weight: 700;
+}
+
+.heroMainLine {
+  display: block;
+  font-size: clamp(56px, 5.5vw, 86px);
+  line-height: .92;
+  letter-spacing: -.065em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.heroSubLine {
+  display: block;
+  max-width: 700px;
+  margin-top: 16px;
+  font-size: clamp(38px, 3.6vw, 56px);
+  line-height: 1;
+  letter-spacing: -.05em;
+  color: var(--red);
+}
+
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroGrid {
+  padding: 92px 0 88px;
+}
+
+.heroProjectStage {
+  min-height: 560px;
+}
+
+/* =========================================================
+   OMNI FUSIONS — HOMEPAGE VIP POLISH
+   Paste at the END of src/app/globals.css
+   ========================================================= */
+
+/* Hero: tighter, more editorial, less vertically oversized */
+.hero {
+  position: relative;
+  min-height: auto;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 760px;
+  height: 760px;
+  right: -240px;
+  top: -310px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(201, 53, 55, 0.09) 0%,
+    rgba(201, 53, 55, 0.035) 38%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGrid {
+  position: relative;
+  z-index: 1;
+  padding-top: 88px;
+  padding-bottom: 86px;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 2;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  max-width: 780px;
+}
+
+.heroMainLine {
+  display: block;
+  font-size: clamp(54px, 5.25vw, 84px);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.heroSubLine {
+  display: block;
+  max-width: 690px;
+  margin-top: 17px;
+  font-size: clamp(34px, 3.35vw, 54px);
+  line-height: 1.01;
+  letter-spacing: -0.052em;
+  color: var(--red);
+  text-wrap: balance;
+}
+
+.heroLead {
+  max-width: 650px;
+  margin-top: 28px;
+  font-size: clamp(16px, 1.12vw, 18px);
+  line-height: 1.72;
+}
+
+.heroTrust {
+  margin-top: 38px;
+}
+
+.heroStageReveal {
+  min-width: 0;
+  width: 100%;
+}
+
+.heroProjectStage {
+  min-height: 545px;
+}
+
+/* Hero cards: subtle "expensive" interaction, not flashy */
+.heroProject {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    filter 0.45s ease;
+  will-change: transform;
+}
+
+.heroProject:hover {
+  z-index: 6;
+  box-shadow: 0 28px 70px rgba(20, 20, 22, 0.15);
+  filter: saturate(1.05);
+}
+
+.heroProject1:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+.heroProject2:hover {
+  transform: translateY(-10px) rotate(1deg);
+}
+
+.heroProject3:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+/* Headings */
+.sectionHead h2,
+.partnershipGrid h2,
+.stickyCopy h2,
+.finalCtaInner h2 {
+  text-wrap: balance;
+}
+
+/* Buttons and text links feel more tactile */
+.button span,
+.textLink span,
+.roundArrow {
+  display: inline-block;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.button:hover span {
+  transform: translate(3px, -3px);
+}
+
+.textLink:hover span {
+  transform: translateX(5px);
+}
+
+/* Service cards */
+.serviceCard {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 55px rgba(20, 20, 22, 0.07);
+  border-color: rgba(201, 53, 55, 0.28);
+}
+
+.serviceCard:hover .roundArrow {
+  transform: translate(3px, -3px) rotate(4deg);
+}
+
+/* Work section */
+.workSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.workSection::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  left: -280px;
+  top: 14%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(201, 53, 55, 0.16),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+/* Partnership section gets a restrained editorial detail */
+.partnershipSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.partnershipSection::after {
+  content: "OF";
+  position: absolute;
+  right: -0.05em;
+  bottom: -0.31em;
+  font-size: clamp(230px, 27vw, 520px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  color: rgba(255, 255, 255, 0.055);
+  pointer-events: none;
+  user-select: none;
+}
+
+.partnershipGrid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Why section */
+.reasonList article {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.reasonList article:hover {
+  transform: translateX(8px);
+  border-color: rgba(201, 53, 55, 0.35);
+}
+
+/* Numbers */
+.numberGrid strong {
+  letter-spacing: -0.055em;
+}
+
+.numberGrid > div {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.numberGrid > div:hover {
+  transform: translateY(-5px);
+}
+
+/* Testimonials */
+.testimonialGrid > * {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.testimonialGrid > *:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(20, 20, 22, 0.065);
+}
+
+/* Process */
+.processGrid article {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.35s ease;
+}
+
+.processGrid article:hover {
+  transform: translateY(-6px);
+}
+
+/* Final CTA */
+.finalCta {
+  position: relative;
+  overflow: hidden;
+}
+
+.finalCta::after {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  right: -210px;
+  top: -250px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 70px rgba(255, 255, 255, 0.025),
+    0 0 0 140px rgba(255, 255, 255, 0.018);
+  pointer-events: none;
+}
+
+.finalCtaInner {
+  position: relative;
+  z-index: 1;
+}
+
+.finalCtaInner h2 {
+  max-width: 900px;
+}
+
+/* Reveal wrappers: avoid accidental layout width issues */
+.heroStageReveal,
+.sectionHead + [style],
+.revealBlock {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .heroGrid {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .heroMainLine {
+    white-space: normal;
+  }
+
+  .heroProjectStage {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroGrid {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .heroMainLine {
+    font-size: clamp(46px, 13vw, 64px);
+  }
+
+  .heroSubLine {
+    margin-top: 13px;
+    font-size: clamp(30px, 8.5vw, 42px);
+  }
+
+  .heroLead {
+    margin-top: 22px;
+    line-height: 1.65;
+  }
+
+  .heroTrust {
+    margin-top: 30px;
+  }
+
+  .heroProjectStage {
+    min-height: 430px;
+  }
+
+  .partnershipSection::after {
+    font-size: 250px;
+    bottom: -0.22em;
+  }
+
+  .reasonList article:hover,
+  .serviceCard:hover,
+  .numberGrid > div:hover,
+  .testimonialGrid > *:hover,
+  .processGrid article:hover {
+    transform: none;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heroProject,
+  .serviceCard,
+  .reasonList article,
+  .numberGrid > div,
+  .testimonialGrid > *,
+  .processGrid article,
+  .button span,
+  .textLink span,
+  .roundArrow {
+    transition: none !important;
+  }
+}

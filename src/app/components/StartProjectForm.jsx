@@ -148,7 +148,9 @@ export default function StartProjectForm() {
           </button>
           {error ? <p className="formError" role="alert">{error}</p> : null}
         </div>
-        <p>We usually reply within one business day. By submitting, you agree that we can use these details to respond to your inquiry.</p>
+        <p>
+          We usually reply within one business day. Your project details stay private and are only used to respond to your inquiry.
+        </p>
       </div>
     </form>
   );

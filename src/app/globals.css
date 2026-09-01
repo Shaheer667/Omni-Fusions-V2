@@ -466,3 +466,53 @@ img { max-width: 100%; height: auto; }
 .legalCopy p { color: var(--muted); line-height: 1.75; font-size: 16px; }
 .legalCopy a { color: var(--ink); text-decoration: underline; }
 .legalNote { border-left: 2px solid var(--red); padding-left: 16px; font-size: 13px !important; }
+
+.formFoot > div {
+  flex-shrink: 0;
+}
+
+.formFoot .button {
+  min-width: 220px;
+  min-height: 56px;
+  padding: 0 24px;
+  gap: 24px;
+  justify-content: space-between;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.contactHero {
+  padding: 105px 0 82px;
+}
+
+.contactHero h1 {
+  font-size: clamp(58px, 5.6vw, 86px);
+  line-height: .94;
+  letter-spacing: -.055em;
+  max-width: 760px;
+}
+
+.projectForm input,
+.projectForm select,
+.projectForm textarea {
+  min-height: 56px;
+  padding: 15px 16px;
+}
+
+.formFoot {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.formFoot .button {
+  min-width: 220px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.formFoot p {
+  max-width: 360px;
+}

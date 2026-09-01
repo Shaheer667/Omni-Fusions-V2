@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="shell footerGrid">
         <div className="footerBrand">
           <BrandLogo dark />
-          <p>Pakistan-based. Working with ambitious businesses worldwide.</p>
+          <p>Creative and technology partner for ambitious businesses worldwide.</p>
         </div>
         <div>
           <p className="footerLabel">Explore</p>

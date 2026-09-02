@@ -14,6 +14,7 @@ import {
   Zap
 } from 'lucide-react';
 
+import CountUp from './components/CountUp';
 import ProjectCard from './components/ProjectCard';
 import TestimonialCard from './components/TestimonialCard';
 import Reveal from './components/Reveal';
@@ -252,12 +253,11 @@ export default function HomePage() {
                     href={`/services/${service.slug}`}
                     key={service.slug}
                   >
-                    <div className="serviceIconWrap">
-                      <Icon size={25} strokeWidth={1.55} />
-                    </div>
+                    <div className="serviceCardHeader">
+                      <div className="serviceIconWrap">
+                        <Icon size={25} strokeWidth={1.55} />
+                      </div>
 
-                    <div className="serviceTop">
-                      <span>0{index + 1}</span>
                       <span className="roundArrow">
                         <ArrowUpRight size={17} strokeWidth={1.8} />
                       </span>
@@ -408,8 +408,6 @@ export default function HomePage() {
 
                 return (
                   <article key={reason.title}>
-                    <span className="reasonNumber">0{index + 1}</span>
-
                     <div className="reasonIcon">
                       <Icon size={21} strokeWidth={1.55} />
                     </div>
@@ -430,25 +428,21 @@ export default function HomePage() {
         <Reveal y={24}>
           <div className="shell numberGrid">
             <div>
-              <span className="statIcon"><Sparkles size={15} /></span>
-              <strong>250+</strong>
+              <CountUp end={250} duration={1000} />
               <span>Clients served worldwide</span>
             </div>
 
             <div>
-              <span className="statIcon"><Zap size={15} /></span>
-              <strong>5+</strong>
+              <CountUp end={5} duration={700} />
               <span>Years of industry experience</span>
             </div>
 
             <div>
-              <span className="statIcon"><Layers3 size={15} /></span>
-              <strong>10+</strong>
+              <CountUp end={10} duration={800} />
               <span>Creative & technical specialists</span>
             </div>
 
             <div>
-              <span className="statIcon"><Code2 size={15} /></span>
               <strong>Global</strong>
               <span>Remote delivery across major international markets</span>
             </div>
@@ -514,7 +508,6 @@ export default function HomePage() {
                 <article key={num}>
                   <div className="processTop">
                     <span>{num}</span>
-                    <Icon size={19} strokeWidth={1.55} />
                   </div>
 
                   <h3>{title}</h3>
@@ -529,12 +522,9 @@ export default function HomePage() {
       <section className="finalCta sectionRed creativeFinalCta">
         <div className="shell finalCtaInner">
           <Reveal y={14}>
-            <div className="creativeEyebrow creativeEyebrowLight">
-              <span className="eyebrowIcon eyebrowIconLight">
-                <Sparkles size={14} />
-              </span>
-              <p className="eyebrow eyebrowLight">START A CONVERSATION</p>
-            </div>
+            <p className="eyebrow eyebrowLight finalCtaEyebrow">
+              START A CONVERSATION
+            </p>
           </Reveal>
 
           <Reveal delay={0.06} y={26}>

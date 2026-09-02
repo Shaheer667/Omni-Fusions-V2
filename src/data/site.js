@@ -174,6 +174,99 @@ export const services = [
   }
 ];
 
+export const homepageTestimonials = [
+  {
+    id: 'brand-style-match',
+    category: 'Graphic Design',
+    rating: '5.0',
+    featured: true,
+    quote:
+      'When I gave a few examples, he was able to match our style very well, meaning that I was able to use these graphics directly in our communications. Highly recommended! We will be working together again.',
+    source: 'Verified Upwork Review',
+    note: 'Corporate branding & marketing graphics'
+  },
+
+  {
+    id: 'cinematic-video',
+    category: 'Video Editing',
+    rating: '5.0',
+    quote:
+      'Very responsive and professional and high quality. I didn’t have to hold her hand on every detail... Excellent job!',
+    source: 'Verified Upwork Review',
+    note: 'Cinematic podcast & documentary editing'
+  },
+
+  {
+    id: 'nextjs-api',
+    category: 'Web Development',
+    rating: '5.0',
+    quote:
+      'Strong technical understanding of Next.js and API integrations. Responsive to feedback, fixed issues quickly, and delivered the final solution as expected.',
+    source: 'Verified Upwork Review',
+    note: 'Next.js & API integrations'
+  },
+
+  {
+    id: 'creative-genius',
+    category: 'Graphic Design',
+    rating: '5.0',
+    quote:
+      'His work exceeded my expectations for this project. A five-star creative genius. A pleasure to work with.',
+    source: 'Verified Upwork Review',
+    note: 'Book cover & creative design'
+  },
+
+  {
+    id: 'social-video',
+    category: 'Video Editing',
+    rating: '5.0',
+    quote:
+      'Quick to make any necessary edits and changes and very open to feedback. Highly recommend for social media video editing!',
+    source: 'Verified Upwork Review',
+    note: 'Reels & social media video'
+  },
+
+  {
+    id: 'calculator-plugin',
+    category: 'Web Development',
+    rating: '5.0',
+    quote:
+      'Excellent job on the custom calculator plugin. Quick, professional, and very responsive throughout the project. The requirements were understood well and delivered fast.',
+    source: 'Verified Upwork Review',
+    note: 'Custom WordPress development'
+  },
+
+  {
+    id: 'content-design',
+    category: 'Graphic Design',
+    rating: '5.0',
+    quote:
+      'Great design sense as well as listening to feedback to improve the results. I will definitely work with her for any future design related projects.',
+    source: 'Verified Upwork Review',
+    note: 'A+ content & marketing design'
+  },
+
+  {
+    id: 'nextjs-ui',
+    category: 'Web Development',
+    rating: '5.0',
+    quote:
+      'Solid Next.js UI expertise and attentive to details, especially responsiveness. Revisions were handled professionally and the final result was delivered as expected.',
+    source: 'Verified Upwork Review',
+    note: 'Next.js UI development'
+  },
+
+  {
+    id: 'deadline-design',
+    category: 'Graphic Design',
+    rating: '5.0',
+    quote:
+      'The team quickly finished their work before the deadline and exactly as asked.',
+    source: 'Verified Upwork Review',
+    note: 'Graphic design & presentation work'
+  }
+];
+
 export const testimonials = [
   {
     category: 'Graphic Design',

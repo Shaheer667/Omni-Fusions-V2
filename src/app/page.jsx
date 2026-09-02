@@ -18,6 +18,7 @@ import Image from 'next/image';
 import CountUp from './components/CountUp';
 import ProjectCard from './components/ProjectCard';
 import TestimonialCard from './components/TestimonialCard';
+import TestimonialShowcase from './components/TestimonialShowcase';
 import Reveal from './components/Reveal';
 import { featuredProjects, services, testimonials } from '@/data/site';
 
@@ -547,14 +548,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.1} y={30}>
-            <div className="testimonialGrid">
-              {testimonials.slice(0, 3).map((item) => (
-                <TestimonialCard
-                  key={item.category + item.quote}
-                  item={item}
-                />
-              ))}
-            </div>
+              <TestimonialShowcase />
           </Reveal>
         </div>
       </section>

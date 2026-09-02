@@ -14,6 +14,7 @@ import {
   Zap
 } from 'lucide-react';
 
+import Image from 'next/image';
 import CountUp from './components/CountUp';
 import ProjectCard from './components/ProjectCard';
 import TestimonialCard from './components/TestimonialCard';
@@ -28,6 +29,30 @@ export const metadata = {
 };
 
 const serviceIcons = [Palette, Clapperboard, Code2];
+
+const heroMockups = [
+  {
+    title: 'Gatherline',
+    slug: 'gatherline',
+    type: 'SaaS Product / Web Development',
+    label: 'Smarter growth for modern agents.',
+    image: '/images/hero/gatherline-showcase.png'
+  },
+  {
+    title: 'Feel.travel',
+    slug: 'feel-travel',
+    type: 'Custom Development / Travel Platform',
+    label: 'Remote work meets better travel.',
+    image: '/images/hero/feel-travel-showcase.png'
+  },
+  {
+    title: 'BizMap Legal',
+    slug: 'bizmap-legal',
+    type: 'Website Redesign / Legal',
+    label: 'Clearer structure. Stronger trust.',
+    image: '/images/hero/bizmap-legal-showcase.png'
+  }
+];
 
 const reasons = [
   {
@@ -103,107 +128,155 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero sectionLight creativeHero">
+      <section className="hero sectionLight creativeHero heroV3">
         <div className="heroWordmark" aria-hidden="true">
           OMNI
         </div>
 
-        <div className="shell heroGrid">
-          <div className="heroCopy">
+        <div className="shell heroGrid heroGridV3">
+          {/* LEFT SIDE */}
+          <div className="heroCopy heroCopyV3">
+            <Reveal delay={0.02} y={26}>
+              <h1 className="heroTitleV3">
+                <span className="heroTitleMain">Make your brand</span>
 
-            <Reveal delay={0.02} y={28}>
-              <h1 className="creativeHeroTitle">
-                <span className="heroMainLine">
-                  <span>Design.</span>{' '}
-                  <em className="serifAccent">Video.</em>{' '}
-                  <span>Web.</span>
-                </span>
-
-                <span className="heroSubLine">
-                  One team built to move your business forward.
-                </span>
+                <em className="heroTitleAccent serifAccent">
+                  hard to ignore.
+                </em>
               </h1>
             </Reveal>
 
-            <Reveal delay={0.14} y={22}>
-              <p className="heroLead">
-                Omni Fusions brings graphic design, video editing and web
-                development under one reliable team for ambitious businesses
-                that need quality work—consistently.
+            <Reveal delay={0.1} y={20}>
+              <p className="heroLead heroLeadV3">
+                Design, video and web—built by one team for businesses that care
+                how they look, communicate and grow.
               </p>
             </Reveal>
 
-            <Reveal delay={0.2} y={18}>
-              <div className="buttonRow">
-                <Link className="button buttonDark creativeButton" href="/contact">
+            <Reveal delay={0.16} y={16}>
+              <div className="heroActionsV3">
+                <Link
+                  className="button buttonDark creativeButton"
+                  href="/contact"
+                >
                   <span>Start a Project</span>
                   <ArrowUpRight size={17} strokeWidth={1.8} />
                 </Link>
 
-                <Link className="textLink creativeTextLink" href="/work">
-                  Explore Our Work
+                <Link className="heroWorkLink" href="/work">
+                  View Selected Work
                   <ArrowUpRight size={16} strokeWidth={1.8} />
                 </Link>
               </div>
             </Reveal>
 
-            <Reveal delay={0.28} y={14}>
-              <div className="heroTrust">
-                <span>
+            <Reveal delay={0.22} y={12}>
+              <div className="heroServicesV3">
+                <span>Graphic Design</span>
+                <i>·</i>
+                <span>Video Editing</span>
+                <i>·</i>
+                <span>Web Development</span>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.28} y={12}>
+              <div className="heroProofV3">
+                <div>
                   <strong>250+</strong>
-                  clients served
-                </span>
-                <span>
-                  <strong>5+</strong>
-                  years experience
-                </span>
-                <span>
-                  <strong>10+</strong>
-                  specialists
-                </span>
+                  <span>clients served worldwide</span>
+                </div>
+
+                <div className="heroProofDivider" />
+
+                <div>
+                  <strong>5.0 ★</strong>
+                  <span>verified client feedback</span>
+                </div>
               </div>
             </Reveal>
           </div>
 
-          <Reveal className="heroStageReveal" delay={0.12} y={34}>
+          {/* RIGHT SIDE */}
+          <Reveal className="heroStageReveal" delay={0.1} y={32}>
             <div
-              className="heroStage heroProjectStage"
-              aria-label="Selected Omni Fusions work"
+              className="heroShowcaseV3"
+              aria-label="Selected Omni Fusions projects"
             >
-              <div className="heroMiniBadge heroMiniBadgeDesign">
-                <Palette size={15} />
-                <span>Brand & Design</span>
-              </div>
-
-              <div className="heroMiniBadge heroMiniBadgeVideo">
-                <Play size={14} fill="currentColor" />
-                <span>Video & Motion</span>
-              </div>
-
-              <div className="heroMiniBadge heroMiniBadgeWeb">
-                <Code2 size={15} />
-                <span>Web & Product</span>
-              </div>
-
-              {heroProjects.map((project, index) => (
+              {/* LARGE PROJECT */}
+              {heroMockups[0] && (
                 <Link
-                  href={`/work/${project.slug}`}
-                  className={`heroProject heroProject${index + 1}`}
-                  key={project.slug}
+                  href="/work/gatherline-saas-platform"
+                  className="heroShowcaseMain"
                 >
-                  <span className="frameTag">{project.heroLabel}</span>
-
-                  <div className={`heroProjectArt projectVisual${project.accent}`}>
-                    <div className="visualGrid" />
-                    <b>{project.title.slice(0, 2).toUpperCase()}</b>
+                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
+                    <Image
+                      src={heroMockups[0].image}
+                      alt="Gatherline project mockup"
+                      fill
+                      className="heroShowcaseImg"
+                      priority
+                    />
                   </div>
 
-                  <div className="heroProjectMeta">
-                    <strong>{project.title}</strong>
-                    <span>{project.type}</span>
+                  <div className="showcaseMeta">
+                    <div>
+                      <strong>{heroMockups[0].title}</strong>
+                      <span>{heroMockups[0].type}</span>
+                    </div>
+
+                    <span className="showcaseArrow">↗</span>
                   </div>
                 </Link>
-              ))}
+              )}
+
+              {/* SMALL PROJECT 1 */}
+              {heroMockups[1] && (
+                <Link
+                  href="/work/feel-travel-custom-platform"
+                  className="heroShowcaseSmall heroShowcaseSmallOne"
+                >
+                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
+                    <Image
+                      src={heroMockups[1].image}
+                      alt="Feel.travel project mockup"
+                      fill
+                      className="heroShowcaseImg"
+                    />
+                  </div>
+
+                  <div className="showcaseSmallMeta">
+                    <strong>{heroMockups[1].title}</strong>
+                    <span>↗</span>
+                  </div>
+                </Link>
+              )}
+
+              {/* SMALL PROJECT 2 */}
+              {heroMockups[2] && (
+                <Link
+                  href="/work/bizmap-legal-redesign"
+                  className="heroShowcaseSmall heroShowcaseSmallTwo"
+                >
+                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
+                    <Image
+                      src={heroMockups[2].image}
+                      alt="BizMap Legal project mockup"
+                      fill
+                      className="heroShowcaseImg"
+                    />
+                  </div>
+
+                  <div className="showcaseSmallMeta">
+                    <strong>{heroMockups[2].title}</strong>
+                    <span>↗</span>
+                  </div>
+                </Link>
+              )}
+
+              <span className="heroAnnotation">
+                selected work →
+              </span>
             </div>
           </Reveal>
         </div>

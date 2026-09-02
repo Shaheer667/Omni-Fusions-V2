@@ -218,6 +218,7 @@ export const projects = [
     industry: 'Real Estate Technology',
     type: 'SaaS / Product',
     url: 'https://gatherline.com/',
+    image: '/images/work/gatherline-work.png',
     featured: true,
     heroLabel: 'SAAS PRODUCT',
     summary:
@@ -241,6 +242,7 @@ export const projects = [
     discipline: 'Custom Website Development · Complex Functionality',
     industry: 'Travel / Community',
     type: 'Custom Web Platform',
+    image: '/images/work/feel-travel-work.png',
     url: 'https://feel.travel/',
     featured: true,
     heroLabel: 'CUSTOM WEB',
@@ -265,6 +267,7 @@ export const projects = [
     discipline: 'Website Redesign · Business Website',
     industry: 'Legal Marketing',
     type: 'Business Website',
+    image: '/images/work/bizmap-legal-work.png',
     url: 'https://bizmaplegal.com/',
     featured: true,
     heroLabel: 'WEBSITE REDESIGN',
@@ -313,6 +316,7 @@ export const projects = [
     discipline: 'Logo · Brand Identity · Social Media · YouTube Creative',
     industry: 'Sports Media',
     type: 'Brand System',
+    image: '/images/work/from-nothing-to-glory-work.png',
     url: 'https://www.fromnothingtoglory.com/',
     featured: true,
     heroLabel: 'BRAND + CONTENT',
@@ -362,6 +366,7 @@ export const projects = [
     type: 'Video Production',
     featured: true,
     heroLabel: 'VIDEO EDITING',
+    image: '/images/work/youtube-long-form-editing-work.png',
     summary:
       'A recurring category of work across our editing team: shaping long-form YouTube footage into structured, watchable content through pacing, b-roll, sound and graphics.',
     challenge:

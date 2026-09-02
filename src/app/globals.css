@@ -682,9 +682,15 @@ img { max-width: 100%; height: auto; }
 
 /* Buttons and text links feel more tactile */
 .button span,
-.textLink span,
-.roundArrow {
+.textLink span {
   display: inline-block;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roundArrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -916,5 +922,524 @@ img { max-width: 100%; height: auto; }
   .textLink span,
   .roundArrow {
     transition: none !important;
+  }
+}
+
+/* =========================================================
+   OMNI FUSIONS — CREATIVE HOMEPAGE V2
+   Requires:
+   --font-body
+   --font-display
+   --font-serif
+   variables from next/font setup.
+   Paste AFTER previous homepage CSS.
+   ========================================================= */
+
+/* ---------- TYPOGRAPHY SYSTEM ---------- */
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+.heroMainLine,
+.serviceCard h3,
+.reasonList h3,
+.processGrid h3,
+.numberGrid strong {
+  font-family: var(--font-display), sans-serif;
+}
+
+.serifAccent {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.redText {
+  color: var(--red);
+}
+
+/* ---------- HERO ---------- */
+
+.creativeHero {
+  position: relative;
+}
+
+.heroWordmark {
+  position: absolute;
+  left: -0.035em;
+  bottom: -0.18em;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(220px, 28vw, 540px);
+  line-height: 0.8;
+  font-weight: 800;
+  letter-spacing: -0.105em;
+  color: rgba(20, 20, 22, 0.022);
+}
+
+.creativeEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.creativeEyebrow .eyebrow {
+  margin: 0;
+}
+
+.eyebrowIcon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(20, 20, 22, 0.18);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--red);
+}
+
+.creativeHeroTitle {
+  margin-top: 22px !important;
+}
+
+.creativeHero .heroMainLine {
+  font-size: clamp(58px, 5.6vw, 91px);
+  letter-spacing: -0.072em;
+}
+
+.creativeHero .heroMainLine .serifAccent {
+  color: var(--red);
+  font-size: 1.08em;
+}
+
+.creativeHero .heroSubLine {
+  max-width: 670px;
+  margin-top: 19px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(32px, 3vw, 49px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.creativeButton {
+  gap: 28px;
+}
+
+.creativeButton > span {
+  white-space: nowrap;
+}
+
+.creativeButton svg,
+.creativeTextLink svg {
+  flex: 0 0 auto;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.creativeButton:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.creativeTextLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.creativeTextLink:hover svg {
+  transform: translate(4px, -4px);
+}
+
+/* tiny floating capability pills around hero art */
+.heroMiniBadge {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid rgba(20, 20, 22, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(20, 20, 22, 0.07);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  animation: badgeFloat 5.5s ease-in-out infinite;
+}
+
+.heroMiniBadge svg {
+  color: var(--red);
+}
+
+.heroMiniBadgeDesign {
+  left: -5px;
+  top: 12%;
+}
+
+.heroMiniBadgeVideo {
+  right: 0;
+  top: 44%;
+  animation-delay: -1.8s;
+}
+
+.heroMiniBadgeWeb {
+  left: 14%;
+  bottom: 5%;
+  animation-delay: -3.2s;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ---------- CAPABILITY TICKER ---------- */
+
+.capabilityTicker {
+  overflow: hidden;
+  background: var(--red);
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(20, 20, 22, 0.1);
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: omniTicker 32s linear infinite;
+}
+
+.tickerTrack span {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 24px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tickerTrack i {
+  font-family: Georgia, serif;
+  font-style: normal;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+@keyframes omniTicker {
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- SECTION TYPOGRAPHY ---------- */
+
+.sectionKicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.sectionKicker::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: var(--red);
+}
+
+.sectionKicker > span {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid rgba(20, 20, 22, 0.15);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 750;
+  color: var(--red);
+}
+
+.sectionKickerDark::before {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.sectionKicker .eyebrow {
+  margin: 0;
+}
+
+.sectionKickerDark > span {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: white;
+}
+
+.creativeSectionHead h2,
+.creativePartnership h2,
+.whyCreative h2,
+.creativeFinalCta h2 {
+  letter-spacing: -0.06em;
+}
+
+.creativeSectionHead h2 .serifAccent,
+.creativePartnership h2 .serifAccent,
+.whyCreative h2 .serifAccent,
+.creativeFinalCta h2 .serifAccent {
+  font-size: 1.07em;
+}
+
+/* ---------- SERVICES ---------- */
+
+.creativeServiceGrid {
+  align-items: stretch;
+}
+
+.creativeServiceCard {
+  position: relative;
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+.creativeServiceCard::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  right: -110px;
+  bottom: -125px;
+  border-radius: 50%;
+  background: rgba(201, 53, 55, 0.045);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.creativeServiceCard:hover::before {
+  transform: scale(1.35);
+}
+
+.serviceIconWrap {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 46px;
+  border: 1px solid rgba(20, 20, 22, 0.13);
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 30px rgba(20, 20, 22, 0.045);
+  transform: rotate(-3deg);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.creativeServiceCard:hover .serviceIconWrap {
+  transform: rotate(0deg) translateY(-3px);
+  background: var(--red);
+  color: white;
+}
+
+.creativeServiceCard h3 {
+  font-size: clamp(27px, 2.1vw, 35px);
+  letter-spacing: -0.045em;
+}
+
+.creativeServiceCard .roundArrow {
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- WORK ---------- */
+
+.creativeWorkSection .darkHead h2 {
+  max-width: 760px;
+}
+
+.creativeWorkSection .serifAccent {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+/* ---------- PARTNERSHIP ---------- */
+
+.creativePartnership h2 {
+  max-width: 720px;
+}
+
+.creativePartnership .serifAccent {
+  color: white;
+}
+
+.creativePartnershipList span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.creativePartnershipList svg {
+  flex: 0 0 auto;
+}
+
+/* ---------- WHY ---------- */
+
+.creativeReasonList article {
+  display: grid;
+  grid-template-columns: 48px 50px 1fr;
+  align-items: start;
+  gap: 15px;
+}
+
+.creativeReasonList .reasonNumber {
+  min-width: 0;
+}
+
+.reasonIcon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(20, 20, 22, 0.12);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.creativeReasonList article:hover .reasonIcon {
+  background: var(--red);
+  color: white;
+  transform: rotate(6deg);
+}
+
+/* ---------- NUMBERS ---------- */
+
+.creativeNumbers .numberGrid > div {
+  position: relative;
+}
+
+.statIcon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: grid !important;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.creativeNumbers .numberGrid strong {
+  display: block;
+}
+
+/* ---------- PROCESS ---------- */
+
+.creativeProcessGrid article {
+  position: relative;
+  overflow: hidden;
+}
+
+.processTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.processTop > span {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.processTop svg {
+  color: rgba(20, 20, 22, 0.42);
+}
+
+.creativeProcessGrid article:hover .processTop svg {
+  color: var(--red);
+}
+
+/* ---------- FINAL CTA ---------- */
+
+.creativeEyebrowLight .eyebrowIconLight {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: white;
+}
+
+.creativeFinalCta h2 {
+  font-size: clamp(58px, 7vw, 110px);
+  line-height: 0.9;
+}
+
+.creativeFinalCta h2 .serifAccent {
+  color: white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1100px) {
+  .heroMiniBadge {
+    display: none;
+  }
+
+  .creativeHero .heroMainLine {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroWordmark {
+    display: none;
+  }
+
+  .creativeHero .heroMainLine {
+    font-size: clamp(48px, 14vw, 68px);
+  }
+
+  .creativeHero .heroSubLine {
+    font-size: clamp(29px, 8.5vw, 42px);
+  }
+
+  .tickerTrack span {
+    padding: 13px 18px;
+    gap: 18px;
+    font-size: 11px;
+  }
+
+  .creativeReasonList article {
+    grid-template-columns: 34px 42px 1fr;
+    gap: 11px;
+  }
+
+  .reasonIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .creativeFinalCta h2 {
+    font-size: clamp(50px, 14vw, 72px);
+  }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tickerTrack,
+  .heroMiniBadge {
+    animation: none !important;
   }
 }

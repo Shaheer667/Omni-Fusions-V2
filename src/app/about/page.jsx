@@ -1,68 +1,504 @@
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+
+import TestimonialShowcase from '../components/TestimonialShowcase';
+import Reveal from '../components/Reveal';
+
 
 export const metadata = {
   title: 'About',
-  description: 'Meet Omni Fusions, a Pakistan-based creative and technology agency serving businesses worldwide.',
-  alternates: { canonical: '/about' }
+  description:
+    'Meet Omni Fusions, a creative and technology team delivering graphic design, video editing and web development for businesses worldwide.',
+  alternates: {
+    canonical: '/about'
+  }
 };
+
+
+const principles = [
+  {
+    title: 'Understand before executing.',
+    text:
+      'Good work starts with understanding the business, the audience and what the project actually needs—not simply following instructions at surface level.'
+  },
+  {
+    title: 'Make feedback useful.',
+    text:
+      'Every review cycle should improve the current deliverable while helping the team understand your standards better for the next one.'
+  },
+  {
+    title: 'Build relationships that compound.',
+    text:
+      'The longer we work together, the less time should be spent explaining the basics and the more time should go into making better work.'
+  }
+];
+
 
 export default function AboutPage() {
   return (
     <>
-      <section className="pageHero sectionLight">
-        <div className="shell pageHeroInner">
-          <p className="eyebrow">ABOUT OMNI FUSIONS</p>
-          <h1>A growing team built around dependable creative and technical work.</h1>
-          <p>Omni Fusions is a Pakistan-based agency serving businesses worldwide through graphic design, video editing and web development.</p>
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
+      <section className="pageHero sectionLight aboutPageHero">
+
+        <div className="shell aboutHeroGrid">
+
+          <div className="aboutHeroHeading">
+
+            <Reveal y={18}>
+              <p className="eyebrow">
+                ABOUT OMNI FUSIONS
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.05} y={28}>
+              <h1>
+                One team.
+                <br />
+
+                <em className="serifAccent redText">
+                  More ways to make things happen.
+                </em>
+              </h1>
+            </Reveal>
+
+          </div>
+
+
+          <Reveal delay={0.12} y={22}>
+            <div className="aboutHeroSide">
+
+              <p>
+                Omni Fusions brings design, video and web
+                development together for businesses that want
+                dependable execution without managing a different
+                team for every discipline.
+              </p>
+
+              <div className="aboutHeroProof">
+                <span>250+ clients served</span>
+                <span>5+ years industry experience</span>
+                <span>Worldwide delivery</span>
+              </div>
+
+              <Link
+                href="/work"
+                className="textLink"
+              >
+                See our work
+
+                <ArrowUpRight size={15} />
+              </Link>
+
+            </div>
+          </Reveal>
+
         </div>
+
       </section>
 
-      <section className="aboutVisual sectionDark">
-        <div className="shell aboutVisualInner">
-          <p>OMNI FUSIONS · PAKISTAN</p>
-          <h2>Real team. Real workspace. Global delivery.</h2>
-          <span>Team / studio visual</span>
+
+      {/* =====================================================
+          POSITIONING
+      ===================================================== */}
+
+      <section className="aboutManifesto sectionDark">
+
+        <div className="shell aboutManifestoGrid">
+
+          <Reveal y={24}>
+            <div>
+
+              <div className="sectionKicker sectionKickerDark">
+                <p className="eyebrow eyebrowLight">
+                  BUILT AROUND THE WORK
+                </p>
+              </div>
+
+              <h2>
+                Creative thinking.
+                <br />
+
+                <em className="serifAccent">
+                  Technical capability.
+                </em>
+              </h2>
+
+            </div>
+          </Reveal>
+
+
+          <Reveal delay={0.1} y={22}>
+            <div className="aboutManifestoSide">
+
+              <p>
+                Some projects need design. Some need editing.
+                Others need development—or all three working
+                together. Our structure lets clients start with
+                the capability they need and expand from there
+                without rebuilding the relationship from scratch.
+              </p>
+
+              <div className="aboutManifestoList">
+
+                <span>Graphic Design</span>
+                <span>Video Editing</span>
+                <span>Web Development</span>
+                <span>Ongoing Creative Support</span>
+
+              </div>
+
+            </div>
+          </Reveal>
+
         </div>
+
       </section>
 
-      <section className="section sectionLight">
-        <div className="shell aboutStoryGrid">
-          <div><p className="eyebrow">THE STORY</p><h2>Built through client work, not a pitch deck.</h2></div>
+
+      {/* =====================================================
+          STORY
+      ===================================================== */}
+
+      <section className="section sectionLight aboutStorySection">
+
+        <div className="shell aboutStoryPremiumGrid">
+
+          <Reveal y={24}>
+            <div className="aboutStoryHeading">
+
+              <div className="sectionKicker">
+                <p className="eyebrow">
+                  OUR STORY
+                </p>
+              </div>
+
+              <h2>
+                Built through
+                <br />
+
+                <em className="serifAccent redText">
+                  real client work.
+                </em>
+              </h2>
+
+            </div>
+          </Reveal>
+
+
+          <Reveal delay={0.08} y={22}>
+            <div className="aboutStoryCopy">
+
+              <p className="aboutStoryLead">
+                Omni Fusions grew from hands-on client work into
+                a multidisciplinary creative and technology team
+                serving businesses across international markets.
+              </p>
+
+              <p>
+                Our founders bring more than five years of industry
+                experience, and over the course of building the agency
+                the team has worked with more than 250 clients across
+                the United States, United Kingdom, Canada, Australia
+                and other markets worldwide.
+              </p>
+
+              <p>
+                Much of that growth came through repeat work and
+                long-term relationships. A client might first come
+                to us for a website, a campaign or a video—and stay
+                because having a team that already understands the
+                business makes the next project easier.
+              </p>
+
+              <p>
+                Today, designers, video editors and developers work
+                across focused projects and ongoing accounts. The goal
+                is simple: stay responsive, keep standards high and
+                build enough capacity to support clients as their
+                workload grows.
+              </p>
+
+            </div>
+          </Reveal>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          NUMBERS
+      ===================================================== */}
+
+      <section className="numbersSection sectionDark aboutNumbersSection">
+
+        <div className="shell numberGrid aboutNumberGrid">
+
           <div>
-            <p>Omni Fusions has been operating for around 1.5 years, led by founders with more than five years of hands-on industry experience. During that time, the team has served roughly 250+ clients, with much of the early growth coming through Upwork.</p>
-            <p>Most of those relationships have been international—particularly clients in the United States, along with businesses in the UK, Canada, Australia and other markets. That experience shaped the way we work today: communicate clearly, understand the brief quickly and make it easy for clients to keep the same team when the first project goes well.</p>
-            <p>Our current team includes designers, video editors and developers, with the operational room to expand as workload grows. The goal is not to look large for the sake of it. It is to stay responsive while building enough capacity to support serious, ongoing accounts.</p>
+            <strong>250+</strong>
+            <span>
+              Clients served worldwide
+            </span>
           </div>
-        </div>
-      </section>
 
-      <section className="numbersSection sectionDark">
-        <div className="shell numberGrid">
-          <div><strong>3</strong><span>Graphic designers</span></div>
-          <div><strong>5</strong><span>Video editors</span></div>
-          <div><strong>3</strong><span>Developers</span></div>
-          <div><strong>250+</strong><span>Clients served</span></div>
-        </div>
-      </section>
-
-      <section className="section sectionLight">
-        <div className="shell aboutValuesGrid">
-          <div><p className="eyebrow">HOW WE THINK</p><h2>Quality matters. So does being easy to work with.</h2></div>
-          <div className="reasonList compactReasons">
-            <article><span>01</span><div><h3>Earn the next project.</h3><p>We treat the first engagement as the beginning of a relationship, not a transaction to rush through.</p></div></article>
-            <article><span>02</span><div><h3>Make feedback useful.</h3><p>Every review cycle should improve the current deliverable and make the next one easier to execute.</p></div></article>
-            <article><span>03</span><div><h3>Scale without losing control.</h3><p>As workload grows, we add the right capacity without making the client rebuild communication from scratch.</p></div></article>
+          <div>
+            <strong>5+</strong>
+            <span>
+              Years of industry experience
+            </span>
           </div>
+
+          <div>
+            <strong>10+</strong>
+            <span>
+              Creative & technical specialists
+            </span>
+          </div>
+
+          <div>
+            <strong>Global</strong>
+            <span>
+              Remote delivery across major markets
+            </span>
+          </div>
+
         </div>
+
       </section>
 
-      <section className="finalCta sectionRed">
+
+      {/* =====================================================
+    CLIENT FEEDBACK
+===================================================== */}
+
+      <section className="section sectionLight aboutTestimonialsSection">
+
+        <div className="shell">
+
+          <Reveal y={24}>
+            <div className="aboutTestimonialsHead">
+
+              <div>
+
+                <div className="sectionKicker">
+                  <p className="eyebrow">
+                    CLIENT FEEDBACK
+                  </p>
+                </div>
+
+                <h2>
+                  Built through relationships.
+                  <br />
+
+                  <em className="serifAccent redText">
+                    Proven by the people we work with.
+                  </em>
+                </h2>
+
+              </div>
+
+
+              <p>
+                Different disciplines, same expectation:
+                understand the brief, communicate clearly
+                and deliver work clients want to come back for.
+              </p>
+
+            </div>
+          </Reveal>
+
+
+          <Reveal
+            delay={0.08}
+            y={28}
+          >
+            <TestimonialShowcase variant="about" />
+          </Reveal>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          HOW WE THINK
+      ===================================================== */}
+
+      <section className="section sectionLight aboutPrinciplesSection">
+
+        <div className="shell aboutPrinciplesGrid">
+
+          <Reveal y={24}>
+            <div className="aboutPrinciplesHeading">
+
+              <div className="sectionKicker">
+                <p className="eyebrow">
+                  HOW WE THINK
+                </p>
+              </div>
+
+              <h2>
+                Good work matters.
+                <br />
+
+                <em className="serifAccent redText">
+                  So does how it gets made.
+                </em>
+              </h2>
+
+            </div>
+          </Reveal>
+
+
+          <div className="aboutPrinciplesList">
+
+            {principles.map((principle, index) => (
+
+              <Reveal
+                key={principle.title}
+                delay={index * 0.06}
+                y={18}
+              >
+                <article>
+
+                  <h3>
+                    {principle.title}
+                  </h3>
+
+                  <p>
+                    {principle.text}
+                  </p>
+
+                </article>
+              </Reveal>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          TEAM / WAY OF WORKING
+      ===================================================== */}
+
+      <section className="section sectionDark aboutTeamSection">
+
+        <div className="shell aboutTeamGrid">
+
+          <Reveal y={24}>
+            <div>
+
+              <div className="sectionKicker sectionKickerDark">
+                <p className="eyebrow eyebrowLight">
+                  THE TEAM
+                </p>
+              </div>
+
+              <h2>
+                Small enough to stay close.
+                <br />
+
+                <em className="serifAccent">
+                  Built to scale when needed.
+                </em>
+              </h2>
+
+            </div>
+          </Reveal>
+
+
+          <Reveal delay={0.1} y={22}>
+            <div className="aboutTeamCopy">
+
+              <p>
+                Our team combines dedicated designers and video editors
+                with experienced developers, giving clients access to
+                multiple disciplines without the overhead of managing
+                separate vendors.
+              </p>
+
+              <p>
+                For ongoing accounts, that structure becomes even more
+                useful. The same people learn the brand, understand the
+                feedback and build a production rhythm around the
+                business.
+              </p>
+
+              <Link
+                href="/services"
+                className="aboutTeamLink"
+              >
+                Explore our services
+
+                <ArrowUpRight size={16} />
+              </Link>
+
+            </div>
+          </Reveal>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          CTA
+      ===================================================== */}
+
+      <section className="finalCta sectionRed creativeFinalCta aboutFinalCta">
+
         <div className="shell finalCtaInner">
-          <p className="eyebrow eyebrowLight">WORK WITH US</p>
-          <h2>Need a team that can grow with the workload?</h2>
-          <p>Start with the project in front of you. If the fit is right, we can build from there.</p>
-          <Link href="/contact" className="button buttonLight">Start a Project <span>↗</span></Link>
+
+          <Reveal y={14}>
+            <p className="eyebrow eyebrowLight">
+              WORK WITH OMNI FUSIONS
+            </p>
+          </Reveal>
+
+
+          <Reveal delay={0.05} y={24}>
+            <h2>
+              Start with what
+              <br />
+
+              <em className="serifAccent">
+                needs to move now.
+              </em>
+            </h2>
+          </Reveal>
+
+
+          <Reveal delay={0.1} y={18}>
+            <p>
+              One project or an ongoing relationship—tell us
+              what you’re working on and we’ll recommend the
+              most practical way to get started.
+            </p>
+          </Reveal>
+
+
+          <Reveal delay={0.15} y={14}>
+            <Link
+              href="/contact"
+              className="button buttonLight creativeButton"
+            >
+              <span>
+                Start a Project
+              </span>
+
+              <ArrowUpRight size={17} />
+            </Link>
+          </Reveal>
+
         </div>
+
       </section>
     </>
   );

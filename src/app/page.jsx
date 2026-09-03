@@ -129,74 +129,105 @@ export default function HomePage() {
 
   return (
     <>
+    
       <section className="hero sectionLight creativeHero heroV3">
-        <div className="heroWordmark" aria-hidden="true">
-          OMNI
-        </div>
-
-        <div className="shell heroGrid heroGridV3">
+  <div className="shell heroGrid heroGridV3">
           {/* LEFT SIDE */}
-          <div className="heroCopy heroCopyV3">
-            <Reveal delay={0.02} y={26}>
-              <h1 className="heroTitleV3">
-                <span className="heroTitleMain">Make your brand</span>
+          {/* LEFT SIDE */}
+<div className="heroCopy heroCopyV3">
 
-                <em className="heroTitleAccent serifAccent">
-                  hard to ignore.
-                </em>
-              </h1>
-            </Reveal>
+  <Reveal delay={0.05} y={26}>
+    <h1 className="heroTitleV3">
 
-            <Reveal delay={0.1} y={20}>
-              <p className="heroLead heroLeadV3">
-                Design, video and web—built by one team for businesses that care
-                how they look, communicate and grow.
-              </p>
-            </Reveal>
+      <span className="heroTitleMain">
+        Make your brand
+      </span>
 
-            <Reveal delay={0.16} y={16}>
-              <div className="heroActionsV3">
-                <Link
-                  className="button buttonDark creativeButton"
-                  href="/contact"
-                >
-                  <span>Start a Project</span>
-                  <ArrowUpRight size={17} strokeWidth={1.8} />
-                </Link>
+      <em className="heroTitleAccent serifAccent">
+        hard to ignore.
+      </em>
 
-                <Link className="heroWorkLink" href="/work">
-                  View Selected Work
-                  <ArrowUpRight size={16} strokeWidth={1.8} />
-                </Link>
-              </div>
-            </Reveal>
+    </h1>
+  </Reveal>
 
-            <Reveal delay={0.22} y={12}>
-              <div className="heroServicesV3">
-                <span>Graphic Design</span>
-                <i>·</i>
-                <span>Video Editing</span>
-                <i>·</i>
-                <span>Web Development</span>
-              </div>
-            </Reveal>
 
-            <Reveal delay={0.28} y={12}>
-              <div className="heroProofV3">
-                <div>
-                  <strong>250+</strong>
-                  <span>clients served worldwide</span>
-                </div>
+  <Reveal delay={0.1} y={20}>
+    <p className="heroLead heroLeadV3">
+      Graphic design, video editing and web development—
+      handled by one team for businesses that care how they
+      look, communicate and grow.
+    </p>
+  </Reveal>
 
-                <div className="heroProofDivider" />
 
-                <div>
-                  <strong>5.0 ★</strong>
-                  <span>verified client feedback</span>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+  <Reveal delay={0.16} y={16}>
+    <div className="heroActionsV3">
+
+      <Link
+        className="button buttonDark creativeButton"
+        href="/contact"
+      >
+        <span>Start a Project</span>
+
+        <ArrowUpRight
+          size={17}
+          strokeWidth={1.8}
+        />
+      </Link>
+
+
+      <Link
+        className="heroWorkLink"
+        href="/work"
+      >
+        View Selected Work
+
+        <ArrowUpRight
+          size={16}
+          strokeWidth={1.8}
+        />
+      </Link>
+
+    </div>
+  </Reveal>
+
+
+  <Reveal delay={0.22} y={12}>
+    <div className="heroServicesV3">
+
+      <span>Graphic Design</span>
+
+      <i>·</i>
+
+      <span>Video Editing</span>
+
+      <i>·</i>
+
+      <span>Web Development</span>
+
+    </div>
+  </Reveal>
+
+
+  <Reveal delay={0.28} y={12}>
+    <div className="heroProofV3">
+
+      <div>
+        <strong>250+</strong>
+        <span>clients served worldwide</span>
+      </div>
+
+      <div className="heroProofDivider" />
+
+      <div>
+        <strong>5.0 ★</strong>
+        <span>verified client feedback</span>
+      </div>
+
+    </div>
+  </Reveal>
+
+</div>
 
           {/* RIGHT SIDE */}
           <Reveal className="heroStageReveal" delay={0.1} y={32}>
@@ -276,7 +307,7 @@ export default function HomePage() {
               )}
 
               <span className="heroAnnotation">
-                selected work →
+                Selected work →
               </span>
             </div>
           </Reveal>

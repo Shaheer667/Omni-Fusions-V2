@@ -7536,3 +7536,1804 @@ details[open] summary span {
   }
 
 }
+
+/* =========================================================
+   OMNI FUSIONS — FINAL FULL-SITE RESPONSIVE OVERRIDES
+   KEEP THIS BLOCK AT THE VERY END OF globals.css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL SAFETY
+========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+main {
+  min-width: 0;
+}
+
+.shell {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1180px) {
+
+  :root {
+    --shell: min(100% - 40px, 1040px);
+  }
+
+  .section {
+    padding: 110px 0;
+  }
+
+
+  /* HEADER */
+
+  .editorialMainNav {
+    gap: 24px;
+  }
+
+
+  /* HOMEPAGE HERO */
+
+  .heroGridV3 {
+    grid-template-columns:
+      minmax(0, .95fr)
+      minmax(420px, 1.05fr);
+
+    gap: 50px;
+  }
+
+  .heroTitleV3 {
+    font-size: clamp(58px, 6vw, 84px);
+  }
+
+  .heroShowcaseV3 {
+    min-height: 520px;
+  }
+
+
+  /* GENERIC SPLIT HEADINGS */
+
+  .sectionHeadSplit {
+    gap: 55px;
+  }
+
+
+  /* PARTNERSHIP / WHY */
+
+  .partnershipGrid,
+  .whyGrid {
+    gap: 70px;
+  }
+
+
+  /* SERVICES MAIN */
+
+  .servicesHeroGrid,
+  .servicesEngagementIntro,
+  .servicesFitGrid {
+    gap: 70px;
+  }
+
+
+  /* SERVICE DETAIL */
+
+  .serviceDetailHeroGrid,
+  .servicePositionGrid,
+  .serviceCapabilityGrid,
+  .serviceIdealPremiumGrid,
+  .serviceFaqGrid {
+    gap: 70px;
+  }
+
+
+  /* WORK */
+
+  .workHeroGrid,
+  .workDisciplineHead {
+    gap: 70px;
+  }
+
+
+  /* CASE STUDY */
+
+  .premiumCaseHeroGrid,
+  .premiumCaseNarrativeGrid,
+  .premiumCaseDeliverablesGrid,
+  .caseScopeGrid {
+    gap: 70px;
+  }
+
+
+  /* ABOUT */
+
+  .aboutHeroGrid,
+  .aboutManifestoGrid,
+  .aboutStoryPremiumGrid,
+  .aboutPrinciplesGrid,
+  .aboutTeamGrid,
+  .aboutTestimonialsHead {
+    gap: 70px;
+  }
+
+
+  /* CONTACT */
+
+  .contactPremiumHeroGrid,
+  .contactPremiumGrid {
+    gap: 70px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / LANDSCAPE TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  :root {
+    --shell: min(100% - 36px, 900px);
+  }
+
+  .section {
+    padding: 96px 0;
+  }
+
+
+  /* =====================================================
+     HEADER
+  ===================================================== */
+
+  .editorialNav {
+    min-height: 68px;
+  }
+
+  .editorialBrand {
+    width: 165px;
+  }
+
+  .editorialMainNav {
+    gap: 20px;
+  }
+
+
+  /* =====================================================
+     HOMEPAGE HERO
+  ===================================================== */
+
+  .heroGridV3 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
+
+  .heroCopyV3 {
+    max-width: 760px;
+  }
+
+  .heroTitleV3 {
+    max-width: 760px;
+    font-size: clamp(64px, 9vw, 88px);
+  }
+
+  .heroLeadV3 {
+    max-width: 640px;
+  }
+
+  .heroShowcaseV3 {
+    width: min(760px, 100%);
+    min-height: 570px;
+
+    margin: 10px auto 0;
+  }
+
+
+  /* =====================================================
+     GENERAL SECTION HEADINGS
+  ===================================================== */
+
+  .sectionHeadSplit,
+  .creativeSectionHead {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .sectionHeadSplit > p,
+  .creativeSectionHead > p {
+    max-width: 650px;
+  }
+
+
+  /* =====================================================
+     HOMEPAGE SERVICES
+  ===================================================== */
+
+  .creativeServiceGrid,
+  .serviceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .creativeServiceGrid > :last-child {
+    grid-column: 1 / -1;
+  }
+
+  .creativeServiceCard {
+    min-height: 350px;
+  }
+
+
+  /* =====================================================
+     PROJECT GRID
+  ===================================================== */
+
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 20px;
+  }
+
+  .projectCardLarge {
+    grid-column: 1 / -1;
+  }
+
+  .projectCardLarge .projectVisual {
+    aspect-ratio: 16 / 9;
+  }
+
+
+  /* =====================================================
+     PARTNERSHIP
+  ===================================================== */
+
+  .partnershipGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .partnershipCopy {
+    max-width: 700px;
+  }
+
+
+  /* =====================================================
+     WHY
+  ===================================================== */
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stickyCopy {
+    position: static;
+    max-width: 700px;
+  }
+
+
+  /* =====================================================
+     NUMBERS
+  ===================================================== */
+
+  .numberGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .numberGrid > div {
+    min-height: 210px;
+  }
+
+
+  /* =====================================================
+     PROCESS
+  ===================================================== */
+
+  .processGrid,
+  .creativeProcessGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid article,
+  .creativeProcessGrid article {
+    min-height: 270px;
+  }
+
+
+  /* =====================================================
+     SERVICES MAIN
+  ===================================================== */
+
+  .servicesHeroGrid,
+  .servicesEngagementIntro,
+  .servicesFitGrid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .servicesHeroSide {
+    max-width: 680px;
+  }
+
+  .servicesPageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesEngagementCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesFitHeading h2 {
+    position: static;
+  }
+
+
+  /* =====================================================
+     SERVICE DETAIL
+  ===================================================== */
+
+  .serviceDetailHeroGrid,
+  .servicePositionGrid,
+  .serviceCapabilityGrid,
+  .serviceIdealPremiumGrid,
+  .serviceFaqGrid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .serviceDetailHeroSide {
+    max-width: 700px;
+  }
+
+  .serviceCapabilityHeading,
+  .serviceFaqHeading h2 {
+    position: static;
+  }
+
+  .servicePositionSide,
+  .serviceIdealPremiumList {
+    max-width: 760px;
+  }
+
+  .serviceProofGrid {
+    grid-template-columns: .4fr 1.6fr;
+    gap: 55px;
+  }
+
+
+  /* =====================================================
+     WORK PAGE
+  ===================================================== */
+
+  .workHeroGrid,
+  .workDisciplineHead {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .workHeroSide,
+  .workDisciplineIntro {
+    max-width: 690px;
+  }
+
+
+  /* =====================================================
+     CASE STUDY
+  ===================================================== */
+
+  .premiumCaseHeroGrid,
+  .premiumCaseNarrativeGrid,
+  .premiumCaseDeliverablesGrid,
+  .caseScopeGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .premiumCaseIntro {
+    max-width: 720px;
+  }
+
+  .premiumCaseSticky {
+    position: static;
+  }
+
+  .caseGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* =====================================================
+     ABOUT
+  ===================================================== */
+
+  .aboutHeroGrid,
+  .aboutManifestoGrid,
+  .aboutStoryPremiumGrid,
+  .aboutPrinciplesGrid,
+  .aboutTeamGrid,
+  .aboutTestimonialsHead {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .aboutStoryHeading {
+    position: static;
+  }
+
+  .aboutHeroSide,
+  .aboutManifestoSide,
+  .aboutTeamCopy {
+    max-width: 700px;
+  }
+
+  .aboutTestimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* =====================================================
+     CONTACT
+  ===================================================== */
+
+  .contactPremiumHeroGrid,
+  .contactPremiumGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contactPremiumHeroSide {
+    max-width: 700px;
+  }
+
+  .contactProjectIntro {
+    max-width: 700px;
+  }
+
+  .contactClosingGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .footerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 32px;
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE NAV SWITCH
+========================================================= */
+
+@media (max-width: 820px) {
+
+  :root {
+    --shell: calc(100% - 30px);
+  }
+
+
+  /* =====================================================
+     EDITORIAL HEADER
+  ===================================================== */
+
+  .editorialHeader {
+    position: sticky;
+    top: 0;
+  }
+
+  .editorialNav {
+    min-height: 64px;
+  }
+
+  .editorialBrand {
+    width: 150px;
+  }
+
+  .editorialMenuToggle {
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--ink);
+  }
+
+  .editorialMenuToggle span {
+    width: 15px;
+    height: 1px;
+
+    background: white;
+  }
+
+
+  .editorialMainNav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 12px 15px 20px;
+
+    background: var(--paper);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    box-shadow: 0 18px 40px rgba(20, 20, 22, .08);
+  }
+
+  .editorialMainNavOpen {
+    display: flex;
+  }
+
+
+  .editorialMainNav > a,
+  .editorialServicesTrigger {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 13px;
+  }
+
+  .editorialMainNav > a::after,
+  .editorialServices::after {
+    display: none !important;
+  }
+
+
+  .editorialServices {
+    width: 100%;
+  }
+
+  .editorialServicesTrigger {
+    width: 100%;
+  }
+
+
+  .editorialDropdown {
+    position: static !important;
+
+    width: 100% !important;
+
+    display: none;
+
+    padding: 5px 0 10px;
+
+    border: 0;
+    border-radius: 0;
+
+    background: rgba(20, 20, 22, .025);
+
+    box-shadow: none;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: none !important;
+
+    pointer-events: auto !important;
+  }
+
+  .editorialDropdownOpen {
+    display: block !important;
+  }
+
+  .editorialServices:hover .editorialDropdown:not(.editorialDropdownOpen) {
+    display: none;
+  }
+
+  .editorialDropdown > p {
+    display: none;
+  }
+
+  .editorialDropdown > a {
+    min-height: 47px;
+
+    padding: 0 12px;
+  }
+
+  .editorialDropdown > a span {
+    font-size: 14px;
+  }
+
+
+  .editorialMainNav .editorialNavCta {
+    width: 100%;
+    min-height: 48px;
+
+    margin-top: 14px;
+    padding: 0 16px;
+
+    justify-content: space-between;
+
+    border-radius: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  :root {
+    --shell: calc(100% - 28px);
+  }
+
+
+  /* =====================================================
+     GLOBAL
+  ===================================================== */
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 9px;
+  }
+
+  .sectionHead {
+    margin-bottom: 42px;
+  }
+
+  .sectionHead h2,
+  .stickyCopy h2 {
+    font-size: clamp(40px, 12vw, 52px);
+  }
+
+  .button {
+    min-height: 48px;
+    padding-inline: 18px;
+    gap: 18px;
+
+    font-size: 12px;
+  }
+
+
+  /* =====================================================
+     HOME HERO
+  ===================================================== */
+
+  .heroGridV3 {
+    padding-top: 48px;
+    padding-bottom: 55px;
+
+    gap: 34px;
+  }
+
+  .heroCopyV3 {
+    width: 100%;
+  }
+
+  .heroTitleV3 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(50px, 15vw, 66px);
+    line-height: .9;
+    letter-spacing: -.065em;
+  }
+
+  .heroTitleAccent {
+    white-space: normal;
+  }
+
+  .heroLeadV3 {
+    margin-top: 24px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .heroActionsV3 {
+    margin-top: 25px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 17px;
+  }
+
+  .heroServicesV3 {
+    margin-top: 28px;
+
+    max-width: 340px;
+
+    gap: 6px 8px;
+
+    font-size: 10px;
+  }
+
+  .heroProofV3 {
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+  .heroProofV3 > div:not(.heroProofDivider) {
+    min-width: 120px;
+  }
+
+
+  /* HERO MOCKUPS */
+
+  .heroStageReveal {
+    width: 100%;
+  }
+
+  .heroShowcaseV3 {
+    width: 100%;
+
+    min-height: 430px;
+
+    margin: 0 auto;
+  }
+
+  .heroShowcaseMain {
+    width: 83%;
+    right: 0;
+  }
+
+  .heroShowcaseSmall {
+    width: 46%;
+  }
+
+  .heroShowcaseSmallOne {
+    left: 0;
+    top: 35%;
+  }
+
+  .heroShowcaseSmallTwo {
+    right: 3%;
+    bottom: 0;
+  }
+
+  .heroShowcaseVisual {
+    min-height: 0;
+  }
+
+  .showcaseMeta,
+  .showcaseSmallMeta {
+    font-size: 9px;
+  }
+
+  .showcaseMeta span:not(.showcaseArrow),
+  .showcaseSmallMeta {
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     TICKER
+  ===================================================== */
+
+  .tickerTrack span {
+    padding: 11px 16px;
+
+    gap: 16px;
+
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     HOME SERVICES
+  ===================================================== */
+
+  .creativeServiceGrid,
+  .serviceGrid {
+    grid-template-columns: 1fr;
+
+    border-left: 0;
+  }
+
+  .creativeServiceGrid > :last-child {
+    grid-column: auto;
+  }
+
+  .creativeServiceCard,
+  .serviceCard {
+    min-height: 320px;
+
+    padding: 25px;
+
+    border-left: 1px solid var(--line);
+  }
+
+  .creativeServiceCard h3,
+  .serviceCard h3 {
+    font-size: 34px;
+  }
+
+  .serviceCardHeader {
+    margin-bottom: 50px;
+  }
+
+  .serviceTags span {
+    padding: 7px 9px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     PROJECTS
+  ===================================================== */
+
+  .projectGrid,
+  .workPageGrid,
+  .caseRelatedGrid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .projectCardLarge {
+    grid-column: auto;
+  }
+
+  .projectVisual,
+  .projectCardLarge .projectVisual,
+  .projectImageVisual {
+    aspect-ratio: 16 / 10;
+  }
+
+  .projectMeta {
+    margin-top: 14px;
+  }
+
+  .projectMeta h3 {
+    font-size: 21px;
+  }
+
+  .projectMeta p {
+    font-size: 8px;
+  }
+
+  .roundArrow {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  /* =====================================================
+     PARTNERSHIP
+  ===================================================== */
+
+  .partnershipGrid {
+    gap: 38px;
+  }
+
+  .partnershipGrid h2 {
+    font-size: clamp(44px, 13vw, 58px);
+  }
+
+  .partnershipCopy > p {
+    font-size: 16px;
+  }
+
+  .partnershipList,
+  .creativePartnershipList {
+    grid-template-columns: 1fr;
+  }
+
+  .partnershipList span:nth-child(even) {
+    padding-left: 0;
+
+    border-left: 0;
+  }
+
+
+  /* =====================================================
+     WHY
+  ===================================================== */
+
+  .whyGrid {
+    gap: 38px;
+  }
+
+  .stickyCopy > p:last-child {
+    margin-top: 20px;
+  }
+
+  .creativeReasonList article,
+  .reasonList article {
+    grid-template-columns: 40px 1fr;
+
+    gap: 14px;
+
+    padding: 25px 0;
+  }
+
+  .reasonIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .reasonList h3 {
+    font-size: 23px;
+  }
+
+  .reasonList p {
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     NUMBERS
+  ===================================================== */
+
+  .numberGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .numberGrid > div {
+    min-height: 165px;
+
+    padding: 24px 16px;
+  }
+
+  .numberGrid strong {
+    font-size: clamp(40px, 12vw, 55px);
+  }
+
+  .numberGrid span {
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     TESTIMONIALS
+  ===================================================== */
+
+  .testimonialShowcase {
+    margin-top: 35px;
+  }
+
+  .testimonialMosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredTestimonial {
+    min-height: auto;
+
+    padding: 28px 22px;
+  }
+
+  .featuredTestimonial blockquote {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  .supportingTestimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialMiniCard {
+    min-height: 220px;
+  }
+
+  .testimonialRailWrapper {
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .testimonialRailWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonialRail {
+    animation: none !important;
+
+    width: max-content;
+
+    padding-right: 15px;
+  }
+
+  .testimonialRailCard {
+    width: min(300px, 82vw);
+  }
+
+
+  /* =====================================================
+     PROCESS
+  ===================================================== */
+
+  .processGrid,
+  .creativeProcessGrid,
+  .serviceProcessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processGrid article,
+  .creativeProcessGrid article {
+    min-height: 220px;
+
+    padding: 24px 20px;
+  }
+
+  .processGrid h3,
+  .creativeProcessGrid h3 {
+    margin-top: 44px;
+  }
+
+
+  /* =====================================================
+     FINAL CTA
+  ===================================================== */
+
+  .finalCta {
+    padding: 78px 0;
+  }
+
+  .finalCta h2,
+  .creativeFinalCta h2 {
+    font-size: clamp(48px, 14vw, 64px);
+
+    line-height: .9;
+  }
+
+  .finalCtaInner > p:not(.eyebrow) {
+    margin-top: 22px;
+
+    font-size: 15px;
+  }
+
+
+  /* =====================================================
+     SERVICES MAIN PAGE
+  ===================================================== */
+
+  .servicesPageHero {
+    padding: 65px 0 70px;
+  }
+
+  .servicesHeroGrid {
+    gap: 35px;
+  }
+
+  .servicesHeroCopy h1 {
+    font-size: clamp(48px, 14vw, 65px);
+    line-height: .9;
+  }
+
+  .servicesHeroMainLine {
+    white-space: normal;
+  }
+
+  .servicesHeroLead {
+    font-size: 15px;
+  }
+
+  .servicesHeroCapabilities {
+    margin-top: 22px;
+  }
+
+  .servicesPageGrid {
+    grid-template-columns: 1fr;
+
+    border-left: 0;
+  }
+
+  .servicesPageCard {
+    min-height: 390px;
+
+    padding: 25px;
+
+    border-left: 1px solid var(--line);
+  }
+
+  .servicesPageCardBody {
+    padding-top: 48px;
+  }
+
+  .servicesPageCard h3 {
+    font-size: 39px;
+  }
+
+  .servicesEngagementIntro {
+    margin-bottom: 42px;
+  }
+
+  .servicesEngagementIntro h2 {
+    font-size: 45px;
+  }
+
+  .servicesEngagementCards {
+    grid-template-columns: 1fr;
+
+    border-left: 0;
+  }
+
+  .servicesEngagementCard {
+    min-height: 390px;
+
+    padding: 26px;
+
+    border-left:
+      1px solid rgba(255, 255, 255, .15);
+  }
+
+  .servicesEngagementCard h3 {
+    margin-top: 48px;
+  }
+
+  .servicesFitGrid {
+    gap: 40px;
+  }
+
+  .servicesFitHeading h2 {
+    font-size: 43px;
+  }
+
+  .servicesFitList > div {
+    min-height: 70px;
+  }
+
+  .servicesFitList span {
+    font-size: 21px;
+  }
+
+
+  /* =====================================================
+     SERVICE DETAIL PAGES
+  ===================================================== */
+
+  .serviceDetailHero {
+    padding: 68px 0;
+  }
+
+  .serviceDetailHeroGrid {
+    gap: 35px;
+  }
+
+  .serviceDetailHeroCopy h1 {
+    font-size: clamp(48px, 14vw, 65px);
+    line-height: .9;
+  }
+
+  .serviceDetailLead {
+    font-size: 15px;
+  }
+
+  .serviceHeroActions {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 17px;
+  }
+
+  .servicePositionSection {
+    padding: 72px 0;
+  }
+
+  .servicePositionMain h2,
+  .serviceCapabilityHeading h2,
+  .serviceIdealHeading h2,
+  .serviceFaqHeading h2 {
+    font-size: 43px;
+  }
+
+  .serviceCapabilityGrid,
+  .serviceIdealPremiumGrid {
+    gap: 38px;
+  }
+
+  .serviceCapabilityRow {
+    min-height: 78px;
+
+    grid-template-columns: 34px 1fr 20px;
+
+    gap: 11px;
+  }
+
+  .serviceCapabilityRow h3 {
+    font-size: 20px;
+  }
+
+  .serviceIdealItem {
+    grid-template-columns: 32px 1fr;
+
+    gap: 13px;
+
+    padding: 22px 0;
+  }
+
+  .serviceIdealItem p {
+    font-size: 19px;
+  }
+
+  .serviceProofGrid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .serviceProofQuote blockquote {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+
+  /* =====================================================
+     WORK PAGE
+  ===================================================== */
+
+  .workPageHero {
+    padding: 68px 0;
+  }
+
+  .workHeroGrid {
+    gap: 34px;
+  }
+
+  .workHeroHeading h1 {
+    font-size: clamp(48px, 14vw, 65px);
+
+    line-height: .9;
+  }
+
+  .workHeroSide > p {
+    font-size: 15px;
+  }
+
+  .workHeroNav {
+    margin-top: 22px;
+  }
+
+  .workDisciplineHead {
+    gap: 32px;
+
+    margin-bottom: 42px;
+  }
+
+  .workDisciplineTitle h2 {
+    font-size: clamp(42px, 12vw, 54px);
+  }
+
+
+  /* =====================================================
+     CASE STUDY
+  ===================================================== */
+
+  .premiumCaseHero {
+    padding: 68px 0;
+  }
+
+  .premiumCaseHeroGrid {
+    gap: 35px;
+  }
+
+  .premiumCaseTitle h1 {
+    font-size: clamp(50px, 15vw, 68px);
+
+    line-height: .9;
+  }
+
+  .premiumCaseHeadline {
+    font-size: 24px;
+  }
+
+  .premiumCaseFacts > div {
+    grid-template-columns: 90px 1fr;
+
+    gap: 12px;
+  }
+
+  .caseMediaSection {
+    padding: 30px 0;
+  }
+
+  .casePrimaryVisual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .caseGalleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .premiumCaseNarrativeGrid,
+  .premiumCaseDeliverablesGrid,
+  .caseScopeGrid {
+    gap: 38px;
+  }
+
+  .premiumCaseSticky h2,
+  .premiumCaseDeliverablesGrid h2,
+  .caseScopeHeading h2 {
+    font-size: 43px;
+  }
+
+  .premiumCaseStory article {
+    padding: 30px 0;
+  }
+
+  .premiumCaseStory h3 {
+    font-size: 28px;
+  }
+
+  .premiumCaseStory article > p:last-child {
+    font-size: 14px;
+  }
+
+  .premiumDeliverableRow {
+    min-height: 65px;
+  }
+
+  .premiumDeliverableRow span {
+    font-size: 20px;
+  }
+
+  .caseScopeItem {
+    min-height: 70px;
+
+    grid-template-columns: 30px 1fr;
+
+    gap: 10px;
+  }
+
+  .caseScopeItem p {
+    font-size: 19px;
+  }
+
+
+  /* =====================================================
+     ABOUT
+  ===================================================== */
+
+  .aboutPageHero {
+    padding: 68px 0;
+  }
+
+  .aboutHeroGrid {
+    gap: 35px;
+  }
+
+  .aboutHeroHeading h1 {
+    font-size: clamp(47px, 13.5vw, 63px);
+  }
+
+  .aboutHeroSide > p {
+    font-size: 15px;
+  }
+
+  .aboutManifesto {
+    padding: 72px 0;
+  }
+
+  .aboutManifesto h2,
+  .aboutStoryHeading h2,
+  .aboutPrinciplesHeading h2,
+  .aboutTeamGrid h2 {
+    font-size: 43px;
+  }
+
+  .aboutStoryPremiumGrid,
+  .aboutPrinciplesGrid,
+  .aboutTeamGrid {
+    gap: 38px;
+  }
+
+  .aboutStoryCopy .aboutStoryLead {
+    font-size: 27px;
+  }
+
+  .aboutStoryCopy p {
+    font-size: 14px;
+  }
+
+
+  /* ABOUT TESTIMONIALS */
+
+  .aboutTestimonialsHead {
+    gap: 28px;
+
+    margin-bottom: 38px;
+  }
+
+  .aboutTestimonialsHead h2 {
+    font-size: 43px;
+  }
+
+  .aboutTestimonials {
+    grid-template-columns: 1fr;
+
+    border-left: 0;
+  }
+
+  .aboutTestimonialCard {
+    min-height: 330px;
+
+    padding: 24px;
+
+    border-left: 1px solid var(--line);
+  }
+
+  .aboutTestimonialCard blockquote {
+    margin: 42px 0 30px;
+
+    font-size: 25px;
+  }
+
+
+  /* =====================================================
+     CONTACT
+  ===================================================== */
+
+  .contactHero {
+    padding: 68px 0;
+  }
+
+  .contactPremiumHeroGrid {
+    gap: 35px;
+  }
+
+  .contactPremiumHeading h1 {
+    font-size: clamp(47px, 13.5vw, 63px);
+
+    line-height: .91;
+  }
+
+  .contactPremiumHeroSide > p {
+    font-size: 15px;
+  }
+
+  .contactProjectSection {
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  .contactPremiumGrid {
+    gap: 42px;
+  }
+
+  .contactProjectIntro h2 {
+    font-size: 43px;
+  }
+
+  .contactNextSteps {
+    margin-top: 40px;
+  }
+
+  .contactFormPanel {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .contactFormPanelTop {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .premiumProjectForm .formGrid {
+    grid-template-columns: 1fr;
+
+    gap: 23px;
+  }
+
+  .premiumProjectForm .fullField {
+    margin-top: 25px;
+  }
+
+  .premiumFormFoot {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .premiumFormFoot > p {
+    max-width: 100%;
+  }
+
+  .contactClosing {
+    padding: 70px 0;
+  }
+
+  .contactClosingGrid h2 {
+    font-size: 43px;
+  }
+
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .siteFooter {
+    padding: 65px 0 24px;
+  }
+
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 38px 22px;
+
+    padding-bottom: 48px;
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+  }
+
+  .footerBrand .brandLogo {
+    width: 155px;
+  }
+
+  .footerBrand p {
+    margin-top: 18px;
+
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  :root {
+    --shell: calc(100% - 24px);
+  }
+
+
+  /* HEADER */
+
+  .editorialBrand {
+    width: 138px;
+  }
+
+
+  /* HOME HERO */
+
+  .heroTitleV3 {
+    font-size: clamp(45px, 14.3vw, 58px);
+  }
+
+  .heroShowcaseV3 {
+    min-height: 370px;
+  }
+
+  .heroShowcaseMain {
+    width: 88%;
+  }
+
+  .heroShowcaseSmall {
+    width: 49%;
+  }
+
+  .heroProofDivider {
+    display: none;
+  }
+
+  .heroProofV3 {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .sectionHead h2,
+  .stickyCopy h2 {
+    font-size: 39px;
+  }
+
+
+  /* STATS */
+
+  .numberGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .numberGrid > div {
+    min-height: 145px;
+
+    padding: 20px 12px;
+  }
+
+
+  /* SERVICES */
+
+  .servicesHeroCopy h1,
+  .serviceDetailHeroCopy h1,
+  .workHeroHeading h1,
+  .premiumCaseTitle h1,
+  .aboutHeroHeading h1,
+  .contactPremiumHeading h1 {
+    font-size: 44px;
+  }
+
+
+  /* PROJECT IMAGES */
+
+  .projectVisual,
+  .projectCardLarge .projectVisual,
+  .projectImageVisual {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* CONTACT */
+
+  .contactFormPanelTop strong {
+    font-size: 23px;
+  }
+
+
+  /* FOOTER */
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBrand {
+    grid-column: auto;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  :root {
+    --shell: calc(100% - 20px);
+  }
+
+  .heroTitleV3 {
+    font-size: 42px;
+  }
+
+  .heroShowcaseV3 {
+    min-height: 340px;
+  }
+
+  .heroServicesV3 i {
+    display: none;
+  }
+
+  .heroServicesV3 {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+  .numberGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .numberGrid > div {
+    min-height: 125px;
+  }
+
+  .finalCta h2,
+  .creativeFinalCta h2 {
+    font-size: 44px;
+  }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+  .serviceCard:hover,
+  .servicesPageCard:hover,
+  .aboutTestimonialCard:hover {
+    transform: none;
+  }
+
+  .projectCard:hover .projectWorkImage,
+  .heroShowcaseSmall:hover,
+  .heroShowcaseMain:hover {
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: .01ms !important;
+  }
+
+  .tickerTrack,
+  .testimonialRail {
+    animation: none !important;
+  }
+
+}

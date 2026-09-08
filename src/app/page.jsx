@@ -7,7 +7,6 @@ import {
   Layers3,
   MessageSquareText,
   Palette,
-  Play,
   Rocket,
   Sparkles,
   Workflow,
@@ -17,10 +16,9 @@ import {
 import Image from 'next/image';
 import CountUp from './components/CountUp';
 import ProjectCard from './components/ProjectCard';
-import TestimonialCard from './components/TestimonialCard';
 import TestimonialShowcase from './components/TestimonialShowcase';
 import Reveal from './components/Reveal';
-import { featuredProjects, services, testimonials } from '@/data/site';
+import { featuredProjects, services } from '@/data/site';
 
 export const metadata = {
   title: 'Creative Agency for Design, Video & Web Development',
@@ -31,29 +29,16 @@ export const metadata = {
 
 const serviceIcons = [Palette, Clapperboard, Code2];
 
-const heroMockups = [
-  {
-    title: 'Gatherline',
-    slug: 'gatherline',
-    type: 'SaaS Product / Web Development',
-    label: 'Smarter growth for modern agents.',
-    image: '/images/hero/gatherline-showcase.png'
-  },
-  {
-    title: 'Feel.travel',
-    slug: 'feel-travel',
-    type: 'Custom Development / Travel Platform',
-    label: 'Remote work meets better travel.',
-    image: '/images/hero/feel-travel-showcase.png'
-  },
-  {
-    title: 'BizMap Legal',
-    slug: 'bizmap-legal',
-    type: 'Website Redesign / Legal',
-    label: 'Clearer structure. Stronger trust.',
-    image: '/images/hero/bizmap-legal-showcase.png'
-  }
-];
+const agencyVisuals = {
+  heroMain: '/images/agency/hero-creative-review.webp',
+  heroDetail: '/images/agency/hero-editing-suite.webp',
+  heroSecondary: '/images/agency/hero-design-process.webp',
+  reelOne: '/images/agency/reel-brand-review.jpg',
+  reelTwo: '/images/agency/reel-video-edit.jpg',
+  reelThree: '/images/agency/reel-web-collaboration.jpg',
+  partnership: '/images/agency/partnership-team-review.jpg',
+  why: '/images/agency/why-team-workflow.jpg'
+};
 
 const reasons = [
   {
@@ -125,8 +110,6 @@ const tickerItems = [
 ];
 
 export default function HomePage() {
-  const heroProjects = featuredProjects.slice(0, 3);
-
   return (
     <>
     
@@ -229,86 +212,57 @@ export default function HomePage() {
 
 </div>
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT SIDE — KINETIC AGENCY VISUAL */}
           <Reveal className="heroStageReveal" delay={0.1} y={32}>
             <div
-              className="heroShowcaseV3"
-              aria-label="Selected Omni Fusions projects"
+              className="agencyHeroStage"
+              aria-label="Omni Fusions creative team at work"
             >
-              {/* LARGE PROJECT */}
-              {heroMockups[0] && (
-                <Link
-                  href="/work/gatherline-saas-platform"
-                  className="heroShowcaseMain"
-                >
-                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
-                    <Image
-                      src={heroMockups[0].image}
-                      alt="Gatherline project mockup"
-                      fill
-                      className="heroShowcaseImg"
-                      priority
-                    />
-                  </div>
+              <div className="agencyHeroFrame agencyHeroFrameMain">
+                <Image
+                  src={agencyVisuals.heroMain}
+                  alt="Creative team reviewing work together"
+                  fill
+                  priority
+                  className="agencyMotionImage"
+                  sizes="(max-width: 900px) 100vw, 44vw"
+                />
+                <span className="agencyImageLabel">Creative direction</span>
+              </div>
 
-                  <div className="showcaseMeta">
-                    <div>
-                      <strong>{heroMockups[0].title}</strong>
-                      <span>{heroMockups[0].type}</span>
-                    </div>
+              <div className="agencyHeroFrame agencyHeroFrameDetail">
+                <Image
+                  src={agencyVisuals.heroDetail}
+                  alt="Video editing workflow on a professional workstation"
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 900px) 45vw, 19vw"
+                />
+                <span className="agencyImageLabel">Post-production</span>
+              </div>
 
-                    <span className="showcaseArrow">↗</span>
-                  </div>
-                </Link>
-              )}
+              <div className="agencyHeroFrame agencyHeroFrameSecondary">
+                <Image
+                  src={agencyVisuals.heroSecondary}
+                  alt="Designer developing a visual identity system"
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 900px) 44vw, 18vw"
+                />
+              </div>
 
-              {/* SMALL PROJECT 1 */}
-              {heroMockups[1] && (
-                <Link
-                  href="/work/feel-travel-custom-platform"
-                  className="heroShowcaseSmall heroShowcaseSmallOne"
-                >
-                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
-                    <Image
-                      src={heroMockups[1].image}
-                      alt="Feel.travel project mockup"
-                      fill
-                      className="heroShowcaseImg"
-                    />
-                  </div>
+              <div className="agencyHeroTicker" aria-hidden="true">
+                <span>DESIGN</span>
+                <i>✦</i>
+                <span>VIDEO</span>
+                <i>✦</i>
+                <span>WEB</span>
+              </div>
 
-                  <div className="showcaseSmallMeta">
-                    <strong>{heroMockups[1].title}</strong>
-                    <span>↗</span>
-                  </div>
-                </Link>
-              )}
-
-              {/* SMALL PROJECT 2 */}
-              {heroMockups[2] && (
-                <Link
-                  href="/work/bizmap-legal-redesign"
-                  className="heroShowcaseSmall heroShowcaseSmallTwo"
-                >
-                  <div className="heroShowcaseVisual heroShowcaseImageWrap">
-                    <Image
-                      src={heroMockups[2].image}
-                      alt="BizMap Legal project mockup"
-                      fill
-                      className="heroShowcaseImg"
-                    />
-                  </div>
-
-                  <div className="showcaseSmallMeta">
-                    <strong>{heroMockups[2].title}</strong>
-                    <span>↗</span>
-                  </div>
-                </Link>
-              )}
-
-              <span className="heroAnnotation">
-                Selected work →
-              </span>
+              <div className="agencyHeroNote" aria-hidden="true">
+                <strong>One team.</strong>
+                <span>Multiple disciplines.</span>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -384,6 +338,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="agencyReel" aria-label="Inside the creative workflow">
+        <div className="agencyReelTrack">
+          {[0, 1].map((loop) => (
+            <div className="agencyReelGroup" key={loop} aria-hidden={loop === 1}>
+              <figure className="agencyReelCard agencyReelCardWide">
+                <Image
+                  src={agencyVisuals.reelOne}
+                  alt={loop === 0 ? 'Creative team reviewing brand work' : ''}
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 720px) 80vw, 38vw"
+                />
+                <figcaption>Brand & design</figcaption>
+              </figure>
+
+              <figure className="agencyReelCard agencyReelCardTall">
+                <Image
+                  src={agencyVisuals.reelTwo}
+                  alt={loop === 0 ? 'Video editor shaping a production timeline' : ''}
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 720px) 58vw, 24vw"
+                />
+                <figcaption>Video & motion</figcaption>
+              </figure>
+
+              <figure className="agencyReelCard agencyReelCardWide">
+                <Image
+                  src={agencyVisuals.reelThree}
+                  alt={loop === 0 ? 'Web team collaborating on a digital product' : ''}
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 720px) 80vw, 38vw"
+                />
+                <figcaption>Web & product</figcaption>
+              </figure>
+
+              <div className="agencyReelStatement">
+                <span>BUILT TOGETHER</span>
+                <strong>
+                  Different disciplines.
+                  <em className="serifAccent"> One standard.</em>
+                </strong>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="section sectionDark workSection creativeWorkSection">
         <div className="shell">
           <Reveal y={24}>
@@ -456,6 +459,20 @@ export default function HomePage() {
                 production.
               </p>
 
+              <div className="partnershipMotionVisual">
+                <Image
+                  src={agencyVisuals.partnership}
+                  alt="Creative team reviewing ongoing client work"
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                <div className="partnershipVisualOverlay">
+                  <span>ONGOING CREATIVE PARTNER</span>
+                  <strong>Built to stay close to the work.</strong>
+                </div>
+              </div>
+
               <div className="partnershipList creativePartnershipList">
                 {[
                   'Graphic design requests',
@@ -503,6 +520,17 @@ export default function HomePage() {
                 the brief, communicates clearly and keeps work moving without
                 constant supervision.
               </p>
+
+              <div className="whyMotionVisual">
+                <Image
+                  src={agencyVisuals.why}
+                  alt="Collaborative creative workflow inside a design studio"
+                  fill
+                  className="agencyMotionImage"
+                  sizes="(max-width: 1024px) 100vw, 36vw"
+                />
+                <span className="whyVisualBadge">DESIGN · VIDEO · WEB</span>
+              </div>
             </div>
           </Reveal>
 
@@ -572,8 +600,8 @@ export default function HomePage() {
               </div>
 
               <p>
-                Verified feedback from client projects delivered across
-                graphic design, video editing and web development.
+                Feedback from client projects delivered across graphic design,
+                video editing and web development.
               </p>
             </div>
           </Reveal>

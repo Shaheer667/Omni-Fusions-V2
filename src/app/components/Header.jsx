@@ -10,7 +10,6 @@ import { services } from '@/data/site';
 
 export default function Header() {
   const pathname = usePathname();
-
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
@@ -20,24 +19,14 @@ export default function Header() {
   };
 
   const active = (path) => {
-    if (path === '/services') {
-      return pathname.startsWith('/services');
-    }
-
-    if (path === '/work') {
-      return pathname.startsWith('/work');
-    }
-
+    if (path === '/services') return pathname.startsWith('/services');
+    if (path === '/work') return pathname.startsWith('/work');
     return pathname === path;
   };
 
   return (
     <header className="siteHeader editorialHeader">
-
       <div className="shell editorialNav">
-
-        {/* LOGO */}
-
         <Link
           href="/"
           className="brandLink editorialBrand"
@@ -46,9 +35,6 @@ export default function Header() {
         >
           <BrandLogo priority />
         </Link>
-
-
-        {/* MOBILE BUTTON */}
 
         <button
           className="editorialMenuToggle"
@@ -61,15 +47,10 @@ export default function Header() {
           <span />
         </button>
 
-
-        {/* NAV */}
-
         <nav
-          className={`editorialMainNav ${
-            open ? 'editorialMainNavOpen' : ''
-          }`}
+          className={`editorialMainNav ${open ? 'editorialMainNavOpen' : ''}`}
+          aria-label="Primary navigation"
         >
-
           <Link
             href="/work"
             onClick={close}
@@ -78,39 +59,18 @@ export default function Header() {
             Work
           </Link>
 
-
-          {/* SERVICES */}
-
-          <div
-            className={`editorialServices ${
-              active('/services') ? 'active' : ''
-            }`}
-          >
-
+          <div className={`editorialServices ${active('/services') ? 'active' : ''}`}>
             <button
               type="button"
               className="editorialServicesTrigger"
-              onClick={() =>
-                setServicesOpen((value) => !value)
-              }
+              aria-expanded={servicesOpen}
+              onClick={() => setServicesOpen((value) => !value)}
             >
               Services
-
-              <ChevronDown
-                size={13}
-                strokeWidth={1.7}
-              />
+              <ChevronDown size={13} strokeWidth={1.7} />
             </button>
 
-
-            <div
-              className={`editorialDropdown ${
-                servicesOpen
-                  ? 'editorialDropdownOpen'
-                  : ''
-              }`}
-            >
-
+            <div className={`editorialDropdown ${servicesOpen ? 'editorialDropdownOpen' : ''}`}>
               <p>Services</p>
 
               {services.map((service) => (
@@ -119,32 +79,21 @@ export default function Header() {
                   href={`/services/${service.slug}`}
                   onClick={close}
                 >
-                  <span>
-                    {service.shortTitle}
-                  </span>
-
-                  <ArrowUpRight
-                    size={13}
-                    strokeWidth={1.5}
-                  />
+                  <span>{service.shortTitle}</span>
+                  <ArrowUpRight size={13} strokeWidth={1.5} />
                 </Link>
               ))}
-
 
               <Link
                 href="/services"
                 className="editorialDropdownAll"
                 onClick={close}
               >
-                View all services
-
+                <span>View all services</span>
                 <ArrowUpRight size={13} />
               </Link>
-
             </div>
-
           </div>
-
 
           <Link
             href="/about"
@@ -154,24 +103,24 @@ export default function Header() {
             About
           </Link>
 
+          <Link
+            href="/careers"
+            onClick={close}
+            className={active('/careers') ? 'active' : ''}
+          >
+            Careers
+          </Link>
 
           <Link
             href="/contact"
-            className="editorialNavCta"
             onClick={close}
+            className={active('/contact') ? 'active' : ''}
           >
-            Start a Project
-
-            <ArrowUpRight
-              size={14}
-              strokeWidth={1.8}
-            />
+            Contact
           </Link>
 
         </nav>
-
       </div>
-
     </header>
   );
 }

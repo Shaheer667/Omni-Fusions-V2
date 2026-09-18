@@ -3,7 +3,7 @@ export const site = {
   url: 'https://www.omnifusions.com',
   email: 'info@omnifusions.com',
   description:
-    'Omni Fusions is a Pakistan-based creative and technology agency helping businesses worldwide with graphic design, video editing, and web development.',
+    'Omni Fusions is a creative and technology agency helping businesses worldwide with graphic design, video editing and web development.',
   markets: ['United States', 'United Kingdom', 'Canada', 'Australia', 'Worldwide']
 };
 
@@ -44,7 +44,7 @@ export const services = [
     ],
     proof:
       '“...understanding the images that I wanted to create, and responding to feedback about the style to assure that they matched our corporate brand... Highly recommended! We will be working together again.”',
-    proofLabel: 'Verified Upwork client · Graphic Design',
+    proofLabel: 'Client feedback · Graphic Design',
     seoTitle: 'Graphic Design Services for Growing Brands | Omni Fusions',
     seoDescription:
       'Professional graphic design services for startups, SaaS, e-commerce, agencies and growing businesses. Branding, marketing design, presentations, print and ongoing creative support.'
@@ -85,7 +85,7 @@ export const services = [
     ],
     proof:
       '“Very responsive and professional and high quality. I didn’t have to hold her hand on every detail...”',
-    proofLabel: 'Verified Upwork client · Cinematic Video Editing',
+    proofLabel: 'Client feedback · Video Editing',
     seoTitle: 'Professional Video Editing Services | Omni Fusions',
     seoDescription:
       'Professional video editing for YouTube, podcasts, faceless channels, social media, ads, documentaries and short-form content.'
@@ -126,7 +126,7 @@ export const services = [
     ],
     proof:
       '“...strong technical understanding of Next.js and API integrations. He was responsive to feedback, fixed issues quickly, and delivered the final solution as expected.”',
-    proofLabel: 'Verified Upwork client · Next.js Development',
+    proofLabel: 'Client feedback · Web Development',
     seoTitle: 'Next.js, WordPress & Custom Web Development | Omni Fusions',
     seoDescription:
       'Web development for serious business projects, including Next.js, React, MERN, WordPress, custom functionality and API integrations.'
@@ -182,7 +182,7 @@ export const homepageTestimonials = [
     featured: true,
     quote:
       'When I gave a few examples, he was able to match our style very well, meaning that I was able to use these graphics directly in our communications. Highly recommended! We will be working together again.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Corporate branding & marketing graphics'
   },
 
@@ -192,7 +192,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Very responsive and professional and high quality. I didn’t have to hold her hand on every detail... Excellent job!',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Cinematic podcast & documentary editing'
   },
 
@@ -202,7 +202,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Strong technical understanding of Next.js and API integrations. Responsive to feedback, fixed issues quickly, and delivered the final solution as expected.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Next.js & API integrations'
   },
 
@@ -212,7 +212,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'His work exceeded my expectations for this project. A five-star creative genius. A pleasure to work with.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Book cover & creative design'
   },
 
@@ -222,7 +222,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Quick to make any necessary edits and changes and very open to feedback. Highly recommend for social media video editing!',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Reels & social media video'
   },
 
@@ -232,7 +232,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Excellent job on the custom calculator plugin. Quick, professional, and very responsive throughout the project. The requirements were understood well and delivered fast.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Custom WordPress development'
   },
 
@@ -242,7 +242,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Great design sense as well as listening to feedback to improve the results. I will definitely work with her for any future design related projects.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'A+ content & marketing design'
   },
 
@@ -252,7 +252,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'Solid Next.js UI expertise and attentive to details, especially responsiveness. Revisions were handled professionally and the final result was delivered as expected.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Next.js UI development'
   },
 
@@ -262,7 +262,7 @@ export const homepageTestimonials = [
     rating: '5.0',
     quote:
       'The team quickly finished their work before the deadline and exactly as asked.',
-    source: 'Verified Upwork Review',
+    source: 'Client review',
     note: 'Graphic design & presentation work'
   }
 ];

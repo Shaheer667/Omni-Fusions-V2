@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import {
   ArrowUpRight,
@@ -104,6 +105,50 @@ export default function ServicesPage() {
             </div>
           </Reveal>
 
+        </div>
+      </section>
+
+
+      <section className="servicesVisualBand sectionLight" aria-label="Omni Fusions creative disciplines">
+        <div className="shell servicesVisualGrid">
+          <Reveal y={22}>
+            <figure className="servicesVisualItem servicesVisualItemTall">
+              <Image
+                src="/images/agency/reel-brand-review.webp"
+                alt="Designer reviewing brand and visual work"
+                fill
+                className="servicesVisualImage"
+                sizes="(max-width: 720px) 100vw, 30vw"
+              />
+              <figcaption>Brand & design</figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.06} y={22}>
+            <figure className="servicesVisualItem">
+              <Image
+                src="/images/agency/reel-video-edit.webp"
+                alt="Professional video editing workstation"
+                fill
+                className="servicesVisualImage"
+                sizes="(max-width: 720px) 100vw, 34vw"
+              />
+              <figcaption>Video & motion</figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.12} y={22}>
+            <figure className="servicesVisualItem">
+              <Image
+                src="/images/agency/reel-web-collaboration.webp"
+                alt="Team collaborating on a digital product"
+                fill
+                className="servicesVisualImage"
+                sizes="(max-width: 720px) 100vw, 34vw"
+              />
+              <figcaption>Web & product</figcaption>
+            </figure>
+          </Reveal>
         </div>
       </section>
 

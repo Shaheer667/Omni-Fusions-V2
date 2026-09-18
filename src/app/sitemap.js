@@ -1,7 +1,7 @@
 import { projects, services, site } from '@/data/site';
 
 export default function sitemap() {
-  const staticPages = ['', '/services', '/work', '/about', '/contact', '/privacy'];
+  const staticPages = ['', '/services', '/work', '/about', '/careers', '/contact', '/privacy', '/terms', '/cookies', '/refund-policy'];
   return [
     ...staticPages.map((path) => ({
       url: `${site.url}${path}`,

@@ -30,14 +30,14 @@ export const metadata = {
 const serviceIcons = [Palette, Clapperboard, Code2];
 
 const agencyVisuals = {
-  heroMain: '/images/agency/hero-creative-review.webp',
-  heroDetail: '/images/agency/hero-editing-suite.webp',
-  heroSecondary: '/images/agency/hero-design-process.webp',
-  reelOne: '/images/agency/reel-brand-review.jpg',
-  reelTwo: '/images/agency/reel-video-edit.jpg',
-  reelThree: '/images/agency/reel-web-collaboration.jpg',
-  partnership: '/images/agency/partnership-team-review.jpg',
-  why: '/images/agency/why-team-workflow.jpg'
+  heroMain: '/images/agency/why-team-workflow.webp',
+  heroDetail: '/images/agency/hero-creative-review.webp',
+  heroSecondary: '/images/agency/reel-brand-review.webp',
+  reelOne: '/images/agency/reel-brand-review.webp',
+  reelTwo: '/images/agency/reel-video-edit.webp',
+  reelThree: '/images/agency/reel-web-collaboration.webp',
+  partnership: '/images/agency/partnership-team-review.webp',
+  why: '/images/agency/reel-web-collaboration.webp'
 };
 
 const reasons = [
@@ -123,11 +123,11 @@ export default function HomePage() {
     <h1 className="heroTitleV3">
 
       <span className="heroTitleMain">
-        Make your brand
+        We design, edit and build.
       </span>
 
       <em className="heroTitleAccent serifAccent">
-        hard to ignore.
+        for brands that <br/> expect more.
       </em>
 
     </h1>
@@ -136,9 +136,7 @@ export default function HomePage() {
 
   <Reveal delay={0.1} y={20}>
     <p className="heroLead heroLeadV3">
-      Graphic design, video editing and web development—
-      handled by one team for businesses that care how they
-      look, communicate and grow.
+      Omni Fusions is a full-service creative and technology agency helping ambitious brands turn ideas into design, content and digital experiences that actually move the business forward.
     </p>
   </Reveal>
 
@@ -204,7 +202,7 @@ export default function HomePage() {
 
       <div>
         <strong>5.0 ★</strong>
-        <span>verified client feedback</span>
+        <span>client feedback</span>
       </div>
 
     </div>
@@ -216,12 +214,12 @@ export default function HomePage() {
           <Reveal className="heroStageReveal" delay={0.1} y={32}>
             <div
               className="agencyHeroStage"
-              aria-label="Omni Fusions creative team at work"
+              aria-label="Creative agency workflow"
             >
               <div className="agencyHeroFrame agencyHeroFrameMain">
                 <Image
                   src={agencyVisuals.heroMain}
-                  alt="Creative team reviewing work together"
+                  alt="Creative team collaborating around digital work"
                   fill
                   priority
                   className="agencyMotionImage"
@@ -233,7 +231,7 @@ export default function HomePage() {
               <div className="agencyHeroFrame agencyHeroFrameDetail">
                 <Image
                   src={agencyVisuals.heroDetail}
-                  alt="Video editing workflow on a professional workstation"
+                  alt="Professional video editing workflow on screen"
                   fill
                   className="agencyMotionImage"
                   sizes="(max-width: 900px) 45vw, 19vw"
@@ -244,7 +242,7 @@ export default function HomePage() {
               <div className="agencyHeroFrame agencyHeroFrameSecondary">
                 <Image
                   src={agencyVisuals.heroSecondary}
-                  alt="Designer developing a visual identity system"
+                  alt="Designer reviewing a visual identity system"
                   fill
                   className="agencyMotionImage"
                   sizes="(max-width: 900px) 44vw, 18vw"

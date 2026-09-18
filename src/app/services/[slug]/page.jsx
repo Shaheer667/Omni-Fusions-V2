@@ -716,7 +716,7 @@ export default async function ServicePage({ params }) {
               </div>
 
               <small>
-                Verified client feedback
+                Client feedback
               </small>
 
             </div>

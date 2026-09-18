@@ -55,9 +55,6 @@ export default function TestimonialShowcase({
                   {item.note}
                 </strong>
 
-                <span>
-                  {item.source}
-                </span>
               </div>
 
               <span className="aboutQuoteMark">
@@ -96,9 +93,6 @@ export default function TestimonialShowcase({
               {featured.category}
             </span>
 
-            <span className="verifiedBadge">
-              Verified
-            </span>
 
           </div>
 
@@ -114,7 +108,6 @@ export default function TestimonialShowcase({
 
             <div>
               <strong>{featured.note}</strong>
-              <span>{featured.source}</span>
             </div>
 
             <span className="quoteMark">
@@ -152,7 +145,6 @@ export default function TestimonialShowcase({
 
               <div className="testimonialMiniFooter">
                 <span>{item.note}</span>
-                <small>{item.source}</small>
               </div>
 
             </article>
@@ -193,7 +185,6 @@ export default function TestimonialShowcase({
 
               <div className="railCardBottom">
                 <span>{item.note}</span>
-                <small>{item.source}</small>
               </div>
 
             </article>

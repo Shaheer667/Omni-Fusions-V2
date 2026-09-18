@@ -4,7 +4,7 @@ export default function TestimonialCard({ item }) {
       <div className="rating" aria-label="5 out of 5 stars">★★★★★ <span>5.0</span></div>
       <p className="testimonialQuote">{item.quote}</p>
       <div className="testimonialMeta">
-        <span>Verified Upwork feedback</span>
+        <span>Client feedback</span>
         <strong>{item.category}</strong>
       </div>
     </article>

@@ -1,11 +1,12 @@
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 import StartProjectForm from '../components/StartProjectForm';
 import Reveal from '../components/Reveal';
 
 
 export const metadata = {
-  title: 'Start a Project',
+  title: 'Contact',
   description:
     'Tell Omni Fusions about your graphic design, video editing, web development or ongoing creative support project.',
   alternates: {
@@ -105,6 +106,18 @@ export default function ContactPage() {
                   Ongoing Support
                 </span>
 
+              </div>
+
+
+              <div className="contactAgencyVisual">
+                <Image
+                  src="/images/agency/reel-web-collaboration.webp"
+                  alt="Creative team discussing work together"
+                  fill
+                  className="contactAgencyVisualImage"
+                  sizes="(max-width: 1024px) 100vw, 38vw"
+                />
+                <span>ONE TEAM · DESIGN · VIDEO · WEB</span>
               </div>
 
 

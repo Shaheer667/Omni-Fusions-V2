@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 import TestimonialShowcase from '../components/TestimonialShowcase';
@@ -97,6 +98,38 @@ export default function AboutPage() {
 
         </div>
 
+      </section>
+
+
+      <section className="aboutAgencyVisuals sectionLight" aria-label="Creative collaboration and workflow">
+        <div className="shell aboutAgencyVisualGrid">
+          <Reveal y={24}>
+            <figure className="aboutAgencyVisual aboutAgencyVisualMain">
+              <Image
+                src="/images/agency/why-team-workflow.webp"
+                alt="Creative professionals collaborating around a table"
+                fill
+                className="aboutAgencyVisualImage"
+                sizes="(max-width: 900px) 100vw, 60vw"
+                priority
+              />
+              <figcaption>Collaboration across disciplines</figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.08} y={24}>
+            <figure className="aboutAgencyVisual aboutAgencyVisualSecondary">
+              <Image
+                src="/images/agency/hero-creative-review.webp"
+                alt="Detailed post-production workflow on screen"
+                fill
+                className="aboutAgencyVisualImage"
+                sizes="(max-width: 900px) 100vw, 32vw"
+              />
+              <figcaption>Detail matters</figcaption>
+            </figure>
+          </Reveal>
+        </div>
       </section>
 
 

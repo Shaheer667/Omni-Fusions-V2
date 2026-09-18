@@ -35,9 +35,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="siteFooter">
-      <div className="shell footerGrid">
-
-        {/* BRAND */}
+      <div className="shell footerGrid footerGridCorporate">
         <div className="footerBrand">
           <BrandLogo dark />
 
@@ -62,50 +60,40 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* EXPLORE */}
         <div>
-          <p className="footerLabel">Explore</p>
-
+          <p className="footerLabel">Company</p>
           <div className="footerLinks">
-            <Link href="/work">Work</Link>
-            <Link href="/services">Services</Link>
             <Link href="/about">About</Link>
-            <Link href="/contact">Start a Project</Link>
+            <Link href="/careers">Careers</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/work">Selected Work</Link>
           </div>
         </div>
 
-        {/* SERVICES */}
         <div>
           <p className="footerLabel">Services</p>
-
           <div className="footerLinks">
-            <Link href="/services/graphic-design">
-              Graphic Design
-            </Link>
-
-            <Link href="/services/video-editing">
-              Video Editing
-            </Link>
-
-            <Link href="/services/web-development">
-              Web Development
-            </Link>
-
-            <Link href="/services/dedicated-creative-support">
-              Ongoing Support
-            </Link>
+            <Link href="/services/graphic-design">Graphic Design</Link>
+            <Link href="/services/video-editing">Video Editing</Link>
+            <Link href="/services/web-development">Web Development</Link>
+            <Link href="/services/dedicated-creative-support">Ongoing Support</Link>
           </div>
         </div>
 
-        {/* CONTACT */}
+        <div>
+          <p className="footerLabel">Legal</p>
+          <div className="footerLinks">
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms & Conditions</Link>
+            <Link href="/cookies">Cookie Policy</Link>
+            <Link href="/refund-policy">Cancellation & Refund</Link>
+          </div>
+        </div>
+
         <div>
           <p className="footerLabel">Contact</p>
-
           <div className="footerLinks">
-            <a href={`mailto:${site.email}`}>
-              {site.email}
-            </a>
-
+            <a href={`mailto:${site.email}`}>{site.email}</a>
             <a
               href="https://wa.me/923192506120"
               target="_blank"
@@ -113,13 +101,9 @@ export default function Footer() {
             >
               WhatsApp
             </a>
-
-            <span>
-              US · UK · Canada · Australia · Worldwide
-            </span>
+            <span>US · UK · Canada · Australia · Worldwide</span>
           </div>
         </div>
-
       </div>
 
       <div className="shell footerBottom">
@@ -127,10 +111,12 @@ export default function Footer() {
           © {new Date().getFullYear()} Omni Fusions. All rights reserved.
         </span>
 
-        <span>
+        <span className="footerLegalInline">
           <Link href="/privacy">Privacy</Link>
           {' · '}
-          Creative + Technology Partner
+          <Link href="/terms">Terms</Link>
+          {' · '}
+          <Link href="/cookies">Cookies</Link>
         </span>
       </div>
     </footer>

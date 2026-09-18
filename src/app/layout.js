@@ -124,6 +124,19 @@ export default function RootLayout({ children }) {
       'Worldwide'
     ],
 
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: site.email,
+      availableLanguage: ['English']
+    },
+
+    sameAs: [
+      'https://www.facebook.com/officialomnifusions',
+      'https://www.instagram.com/officialomnifusions/',
+      'https://www.linkedin.com/company/omni-fusions/'
+    ],
+
     knowsAbout: [
       'Graphic Design',
       'Video Editing',

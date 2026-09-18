@@ -17,6 +17,7 @@ import Image from 'next/image';
 import CountUp from './components/CountUp';
 import ProjectCard from './components/ProjectCard';
 import TestimonialShowcase from './components/TestimonialShowcase';
+import HeroAgencyVisual from './components/HeroAgencyVisual';
 import Reveal from './components/Reveal';
 import { featuredProjects, services } from '@/data/site';
 
@@ -210,59 +211,14 @@ export default function HomePage() {
 
 </div>
 
-          {/* RIGHT SIDE — KINETIC AGENCY VISUAL */}
-          <Reveal className="heroStageReveal" delay={0.1} y={32}>
-            <div
-              className="agencyHeroStage"
-              aria-label="Creative agency workflow"
-            >
-              <div className="agencyHeroFrame agencyHeroFrameMain">
-                <Image
-                  src={agencyVisuals.heroMain}
-                  alt="Creative team collaborating around digital work"
-                  fill
-                  priority
-                  className="agencyMotionImage"
-                  sizes="(max-width: 900px) 100vw, 44vw"
-                />
-                <span className="agencyImageLabel">Creative direction</span>
-              </div>
-
-              <div className="agencyHeroFrame agencyHeroFrameDetail">
-                <Image
-                  src={agencyVisuals.heroDetail}
-                  alt="Professional video editing workflow on screen"
-                  fill
-                  className="agencyMotionImage"
-                  sizes="(max-width: 900px) 45vw, 19vw"
-                />
-                <span className="agencyImageLabel">Post-production</span>
-              </div>
-
-              <div className="agencyHeroFrame agencyHeroFrameSecondary">
-                <Image
-                  src={agencyVisuals.heroSecondary}
-                  alt="Designer reviewing a visual identity system"
-                  fill
-                  className="agencyMotionImage"
-                  sizes="(max-width: 900px) 44vw, 18vw"
-                />
-              </div>
-
-              <div className="agencyHeroTicker" aria-hidden="true">
-                <span>DESIGN</span>
-                <i>✦</i>
-                <span>VIDEO</span>
-                <i>✦</i>
-                <span>WEB</span>
-              </div>
-
-              <div className="agencyHeroNote" aria-hidden="true">
-                <strong>One team.</strong>
-                <span>Multiple disciplines.</span>
-              </div>
-            </div>
-          </Reveal>
+          {/* RIGHT SIDE */}
+<Reveal
+  className="heroStageReveal"
+  delay={0.1}
+  y={28}
+>
+  <HeroAgencyVisual />
+</Reveal>
         </div>
       </section>
 

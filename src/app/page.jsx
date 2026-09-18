@@ -113,112 +113,112 @@ const tickerItems = [
 export default function HomePage() {
   return (
     <>
-    
+
       <section className="hero sectionLight creativeHero heroV3">
-  <div className="shell heroGrid heroGridV3">
+        <div className="shell heroGrid heroGridV3">
           {/* LEFT SIDE */}
           {/* LEFT SIDE */}
-<div className="heroCopy heroCopyV3">
+          <div className="heroCopy heroCopyV3">
 
-  <Reveal delay={0.05} y={26}>
-    <h1 className="heroTitleV3">
+            <Reveal delay={0.05} y={26}>
+              <h1 className="heroTitleV3">
 
-      <span className="heroTitleMain">
-        We design, edit and build.
-      </span>
+                <span className="heroTitleMain">
+                  We design, edit and build.
+                </span>
 
-      <em className="heroTitleAccent serifAccent">
-        for brands that <br/> expect more.
-      </em>
+                <em className="heroTitleAccent serifAccent">
+                  for brands that <br /> expect more.
+                </em>
 
-    </h1>
-  </Reveal>
-
-
-  <Reveal delay={0.1} y={20}>
-    <p className="heroLead heroLeadV3">
-      Omni Fusions is a full-service creative and technology agency helping ambitious brands turn ideas into design, content and digital experiences that actually move the business forward.
-    </p>
-  </Reveal>
+              </h1>
+            </Reveal>
 
 
-  <Reveal delay={0.16} y={16}>
-    <div className="heroActionsV3">
-
-      <Link
-        className="button buttonDark creativeButton"
-        href="/contact"
-      >
-        <span>Start a Project</span>
-
-        <ArrowUpRight
-          size={17}
-          strokeWidth={1.8}
-        />
-      </Link>
+            <Reveal delay={0.1} y={20}>
+              <p className="heroLead heroLeadV3">
+                Omni Fusions is a full-service creative and technology agency helping ambitious brands turn ideas into design, content and digital experiences that actually move the business forward.
+              </p>
+            </Reveal>
 
 
-      <Link
-        className="heroWorkLink"
-        href="/work"
-      >
-        View Selected Work
+            <Reveal delay={0.16} y={16}>
+              <div className="heroActionsV3">
 
-        <ArrowUpRight
-          size={16}
-          strokeWidth={1.8}
-        />
-      </Link>
+                <Link
+                  className="button buttonDark creativeButton"
+                  href="/contact"
+                >
+                  <span>Start a Project</span>
 
-    </div>
-  </Reveal>
-
-
-  <Reveal delay={0.22} y={12}>
-    <div className="heroServicesV3">
-
-      <span>Graphic Design</span>
-
-      <i>·</i>
-
-      <span>Video Editing</span>
-
-      <i>·</i>
-
-      <span>Web Development</span>
-
-    </div>
-  </Reveal>
+                  <ArrowUpRight
+                    size={17}
+                    strokeWidth={1.8}
+                  />
+                </Link>
 
 
-  <Reveal delay={0.28} y={12}>
-    <div className="heroProofV3">
+                <Link
+                  className="heroWorkLink"
+                  href="/work"
+                >
+                  View Selected Work
 
-      <div>
-        <strong>250+</strong>
-        <span>clients served worldwide</span>
-      </div>
+                  <ArrowUpRight
+                    size={16}
+                    strokeWidth={1.8}
+                  />
+                </Link>
 
-      <div className="heroProofDivider" />
+              </div>
+            </Reveal>
 
-      <div>
-        <strong>5.0 ★</strong>
-        <span>client feedback</span>
-      </div>
 
-    </div>
-  </Reveal>
+            <Reveal delay={0.22} y={12}>
+              <div className="heroServicesV3">
 
-</div>
+                <span>Graphic Design</span>
+
+                <i>·</i>
+
+                <span>Video Editing</span>
+
+                <i>·</i>
+
+                <span>Web Development</span>
+
+              </div>
+            </Reveal>
+
+
+            <Reveal delay={0.28} y={12}>
+              <div className="heroProofV3">
+
+                <div>
+                  <strong>250+</strong>
+                  <span>clients served worldwide</span>
+                </div>
+
+                <div className="heroProofDivider" />
+
+                <div>
+                  <strong>5.0 ★</strong>
+                  <span>client feedback</span>
+                </div>
+
+              </div>
+            </Reveal>
+
+          </div>
 
           {/* RIGHT SIDE */}
-<Reveal
-  className="heroStageReveal"
-  delay={0.1}
-  y={28}
->
-  <HeroAgencyVisual />
-</Reveal>
+          <Reveal
+            className="heroStageReveal"
+            delay={0.1}
+            y={28}
+          >
+            <HeroAgencyVisual />
+          </Reveal>
         </div>
       </section>
 
@@ -236,24 +236,55 @@ export default function HomePage() {
       <section className="section sectionLight servicesCreative">
         <div className="shell">
           <Reveal y={24}>
-            <div className="sectionHead sectionHeadWide creativeSectionHead">
-              <div className="sectionKicker">
-                <p className="eyebrow">WHAT WE DO</p>
-              </div>
+  <div className="whatWeDoIntro">
 
-              <h2>
-                Three disciplines.
-                <br />
-                <em className="serifAccent redText">One creative standard.</em>
-              </h2>
+    {/* LEFT COPY */}
+    <div className="whatWeDoCopy">
 
-              <p>
-                Design that builds credibility, video that holds attention,
-                and web experiences built to perform. One team keeps the work
-                connected from brief to delivery.
-              </p>
-            </div>
-          </Reveal>
+      <div className="sectionKicker">
+        <p className="eyebrow">
+          WHAT WE DO
+        </p>
+      </div>
+
+      <h2>
+        Three disciplines.
+        <br />
+
+        <em className="serifAccent redText">
+          One creative standard.
+        </em>
+      </h2>
+
+      <p>
+        Design that builds credibility, video that holds attention,
+        and web experiences built to perform. One team keeps the work
+        connected from brief to delivery.
+      </p>
+
+    </div>
+
+
+    {/* RIGHT IMAGE */}
+    <div className="whatWeDoVisual">
+
+      <Image
+        src="/images/agency/what-we-do.jfif"
+        alt="Creative team collaborating on digital work"
+        fill
+        className="whatWeDoImage"
+        sizes="(max-width: 900px) 100vw, 42vw"
+      />
+
+      <div
+        className="whatWeDoImageAccent"
+        aria-hidden="true"
+      />
+
+    </div>
+
+  </div>
+</Reveal>
 
           <Reveal delay={0.1} y={30}>
             <div className="serviceGrid creativeServiceGrid">
@@ -561,7 +592,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.1} y={30}>
-              <TestimonialShowcase />
+            <TestimonialShowcase />
           </Reveal>
         </div>
       </section>

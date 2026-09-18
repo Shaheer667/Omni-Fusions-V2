@@ -269,7 +269,7 @@ export default function HomePage() {
     <div className="whatWeDoVisual">
 
       <Image
-        src="/images/agency/what-we-do.jfif"
+        src="/images/agency/what-we-do.webp"
         alt="Creative team collaborating on digital work"
         fill
         className="whatWeDoImage"
